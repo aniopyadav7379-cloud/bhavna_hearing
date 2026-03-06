@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Services & Diagnostic Tests | Bhavana Hearing & Vertigo Clinic Hyderabad</title>
+<meta name="description" content="Comprehensive hearing, vertigo and speech therapy services and 22 diagnostic tests at Bhavana Hearing & Vertigo Clinic, Hyderabad."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+<style>
+/* SECTION NAV */
+.pg-nav{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+.pg-nav a{padding:.46rem 1.2rem;border-radius:50px;border:1.5px solid var(--bd);background:#fff;text-decoration:none;font-size:.85rem;font-weight:600;color:var(--text-lt);transition:all var(--tr)}
+.pg-nav a:hover,.pg-nav a.act{background:var(--or);color:#fff;border-color:var(--or)}
+
+/* SERVICES */
+.svc-cat{margin-bottom:4rem}
+.sc-hdr{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding:1.1rem 1.5rem;background:#fff;border-radius:var(--r);border-left:4px solid var(--or);box-shadow:0 2px 12px rgba(0,0,0,.04)}
+.sc-hdr.v{border-left-color:var(--vio)}.sc-hdr.sp{border-left-color:var(--spe)}
+.sc-hdr-ico{font-size:1.85rem;flex-shrink:0}
+.sc-hdr h2{font-family:var(--fh);font-size:1.45rem;color:var(--text)}
+.sc-hdr p{font-size:.85rem;color:var(--text-lt);margin:0}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(278px,1fr));gap:1.2rem}
+.svc-card{background:#fff;border:1px solid var(--bd-lt);border-radius:var(--r);padding:1.5rem;transition:transform var(--tr),box-shadow var(--tr),border-color var(--tr)}
+.svc-card:hover{transform:translateY(-5px);box-shadow:var(--sh);border-color:var(--or)}
+.svc-card.v:hover{border-color:var(--vio)}.svc-card.sp:hover{border-color:var(--spe)}
+.svc-card h3{font-family:var(--fh);font-size:1.1rem;margin-bottom:.42rem}
+.svc-card p{font-size:.86rem;color:var(--text-lt);margin-bottom:.75rem}
+.svc-card ul{list-style:none;display:flex;flex-direction:column;gap:.2rem}
+.svc-card ul li{font-size:.8rem;color:var(--text-lt);padding-left:1.05rem;position:relative}
+.svc-card ul li::before{content:"✓";position:absolute;left:0;color:var(--or);font-weight:700}
+.svc-card.v ul li::before{color:var(--vio)}.svc-card.sp ul li::before{color:var(--spe)}
+.svc-cta{background:var(--bg-alt);border-radius:var(--r);padding:2.5rem;text-align:center;margin-top:3.5rem}
+.svc-cta h3{font-family:var(--fh);font-size:1.65rem;margin-bottom:.55rem}
+.svc-cta p{color:var(--text-lt);margin-bottom:1.4rem}
+.svc-cta-btns{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
+
+/* TESTS */
+.ttabs{display:flex;gap:.5rem;justify-content:center;margin-bottom:2rem;flex-wrap:wrap}
+.ttab{padding:.55rem 1.75rem;border-radius:50px;border:1.5px solid rgba(255,255,255,.15);background:transparent;color:rgba(255,255,255,.5);cursor:pointer;font-family:var(--fb);font-size:.87rem;font-weight:500;transition:all var(--tr)}
+.ttab.act,.ttab:hover{background:var(--or);color:#fff;border-color:var(--or)}
+.tpanel{display:none}.tpanel.act{display:block}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.2rem}
+.tcard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--r);padding:1.4rem;transition:background var(--tr),border-color var(--tr)}
+.tcard:hover{background:rgba(232,98,42,.08);border-color:rgba(232,98,42,.28)}
+.tnum{font-family:var(--fh);font-size:2.4rem;font-weight:700;color:rgba(232,98,42,.22);line-height:1;margin-bottom:.55rem}
+.tcard h4{font-size:.95rem;font-weight:600;color:var(--text-inv);margin-bottom:.32rem}
+.tcard p{font-size:.82rem;color:rgba(232,240,245,.45);line-height:1.55}
+
+/* VISIT PROCESS */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:1.4rem;margin-top:2.5rem}
+.step{text-align:center;padding:1.7rem 1.1rem;background:rgba(255,255,255,.04);border-radius:var(--r);border:1px solid rgba(255,255,255,.08)}
+.step-n{font-family:var(--fh);font-size:2.6rem;color:rgba(232,98,42,.28);line-height:1;margin-bottom:.45rem}
+.step h4{color:var(--text-inv);font-size:.93rem;font-weight:700;margin-bottom:.38rem}
+.step p{color:rgba(232,240,245,.42);font-size:.8rem}
+
+/* FAQ */
+.faqs{display:flex;flex-direction:column;gap:.75rem;max-width:780px;margin:0 auto}
+.faq{background:#fff;border:1px solid var(--bd-lt);border-radius:var(--rs);overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:.95rem 1.25rem;cursor:pointer;font-weight:600;font-size:.93rem;transition:background var(--tr)}
+.faq-q:hover{background:rgba(232,98,42,.04)}
+.faq-q span{font-size:.88rem;color:var(--or);transition:transform var(--tr);flex-shrink:0}
+.faq.open .faq-q span{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq.open .faq-a{max-height:300px}
+.faq-a p{padding:.2rem 1.25rem 1rem;font-size:.87rem;color:var(--text-lt);line-height:1.65}
+</style>
+</head>
+<body>
+
+<div id="preloader">
+  <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#e8622a" stroke-width="2" class="pl-ring"/><path d="M32 12C20.95 12 12 20.95 12 32c0 6.04 2.7 11.46 6.97 15.17l3.1-3.52A10.98 10.98 0 0118 32c0-7.73 6.27-14 14-14s14 6.27 14 14c0 4.32-1.96 8.17-5.05 10.75l3.1 3.52C48.3 43.46 51 38.04 51 32c0-11.05-8.95-20-19-20z" fill="#e8622a"/><circle cx="32" cy="32" r="4.5" fill="#e8622a"/></svg>
+  <strong>Bhavana</strong><span>Hearing &amp; Vertigo Clinic</span>
+</div>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="tag">Services &amp; Diagnostics</span>
+    <h1>Hearing, Vertigo &amp;<br><em>Speech Care</em></h1>
+    <p>Comprehensive services and 22 diagnostic tests — all under one roof at Bhavana Hyderabad.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Services &amp; Tests</span></div>
+  </div>
+</div>
+
+<!-- ══════════ SERVICES ══════════ -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-hd"><span class="tag">Our Services</span><h2>What We <em>Treat</em></h2><p>From hearing loss to dizziness, from newborns to the elderly — complete care from diagnosis to rehabilitation.</p></div>
+
+    <div class="pg-nav">
+      <a href="#hearing" class="act">👂 Hearing Care</a>
+      <a href="#vertigo">🌀 Vertigo &amp; Balance</a>
+      <a href="#speech">🗣️ Speech Therapy</a>
+      <a href="#tests">🔬 Diagnostic Tests</a>
+    </div>
+
+    <!-- HEARING -->
+    <div id="hearing" class="svc-cat">
+      <div class="sc-hdr">
+        <span class="sc-hdr-ico">👂</span>
+        <div><h2>Hearing Care Services</h2><p>Complete audiology from diagnosis to rehabilitation — for all ages, all types of hearing loss</p></div>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card" data-aos>
+          <h3>Hearing Assessment &amp; Audiometry</h3>
+          <p>Comprehensive audiometric evaluation in a calibrated sound booth to accurately measure the type, degree and configuration of hearing loss.</p>
+          <ul><li>Pure-tone audiometry (250–8000 Hz)</li><li>Speech audiometry (SRT &amp; SDS)</li><li>Impedance / tympanometry</li><li>Otoacoustic emissions (OAE)</li></ul>
+        </div>
+        <div class="svc-card" data-aos>
+          <h3>Hearing Aid Fitting &amp; Programming</h3>
+          <p>Expert selection, real-ear verified fitting and digital programming of hearing aids precisely matched to your audiogram and lifestyle.</p>
+          <ul><li>Custom shell / ear mould fitting</li><li>Real-ear measurement (REM)</li><li>Digital fine-tuning &amp; programming</li><li>Trial period available</li></ul>
+        </div>
+        <div class="svc-card" data-aos>
+          <h3>Paediatric Audiology</h3>
+          <p>Child-friendly hearing tests for newborns, infants and children using BERA, play audiometry, OAE and behavioural testing.</p>
+          <ul><li>Newborn OAE screening</li><li>BERA / ABR / ASSR testing</li><li>Play audiometry (18m–5 yrs)</li><li>Early intervention support</li></ul>
+        </div>
+        <div class="svc-card" data-aos>
+          <h3>Cochlear Implant Support</h3>
+          <p>Pre-operative candidacy evaluation, device mapping and auditory verbal therapy for cochlear implant recipients and families.</p>
+          <ul><li>CI candidacy evaluation</li><li>Pre-surgical counselling &amp; tests</li><li>Post-surgery device mapping</li><li>AVT &amp; aural rehabilitation</li></ul>
+        </div>
+        <div class="svc-card" data-aos>
+          <h3>Tinnitus Management</h3>
+          <p>Evidence-based tinnitus management including Tinnitus Retraining Therapy, sound therapy, counselling and hearing aid-based masking.</p>
+          <ul><li>TRT (Tinnitus Retraining Therapy)</li><li>Sound therapy &amp; masking</li><li>Counselling &amp; coping strategies</li><li>Hearing aid-based relief</li></ul>
+        </div>
+        <div class="svc-card" data-aos>
+          <h3>Aural Rehabilitation</h3>
+          <p>Personalised listening and speech-perception training to help hearing aid users maximise communication in everyday life.</p>
+          <ul><li>Lip reading training</li><li>Communication strategies</li><li>Listening practice exercises</li><li>Family counselling sessions</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- VERTIGO -->
+    <div id="vertigo" class="svc-cat">
+      <div class="sc-hdr v">
+        <span class="sc-hdr-ico">🌀</span>
+        <div><h2>Vertigo &amp; Balance Disorder Services</h2><p>Advanced vestibular diagnostics and treatment — most BPPV patients leave without dizziness after one session</p></div>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card v" data-aos>
+          <h3>BPPV Diagnosis &amp; Treatment</h3>
+          <p>The most common vertigo — displaced crystals in inner ear canals. Diagnosed and cured in 1–2 clinic visits with the Epley Manoeuvre.</p>
+          <ul><li>Dix-Hallpike diagnostic test</li><li>Epley Manoeuvre (posterior canal)</li><li>Semont Manoeuvre</li><li>Barbecue Roll (horizontal canal)</li></ul>
+        </div>
+        <div class="svc-card v" data-aos>
+          <h3>Ménière's Disease Management</h3>
+          <p>Long-term management of this inner ear disorder causing episodic vertigo, fluctuating hearing loss, tinnitus and ear fullness.</p>
+          <ul><li>Dietary counselling (low sodium)</li><li>Medication coordination</li><li>Vestibular rehabilitation</li><li>Hearing aid support</li></ul>
+        </div>
+        <div class="svc-card v" data-aos>
+          <h3>Vestibular Neuritis &amp; Labyrinthitis</h3>
+          <p>Structured acute management and vestibular rehabilitation for inflammation of the inner ear balance nerves.</p>
+          <ul><li>Acute phase management</li><li>VRT exercise programme</li><li>Gaze stabilisation training</li><li>Balance retraining</li></ul>
+        </div>
+        <div class="svc-card v" data-aos>
+          <h3>Vestibular Migraine</h3>
+          <p>Specialist assessment for migraine-associated dizziness — a commonly misdiagnosed condition often confused with BPPV or anxiety.</p>
+          <ul><li>Detailed diagnostic evaluation</li><li>VNG testing</li><li>Dietary &amp; lifestyle guidance</li><li>Neurologist coordination</li></ul>
+        </div>
+        <div class="svc-card v" data-aos>
+          <h3>Vestibular Rehabilitation Therapy (VRT)</h3>
+          <p>Structured exercise programme to retrain the brain and vestibular system after inner ear dysfunction — promotes real neurological recovery.</p>
+          <ul><li>Gaze stabilisation exercises</li><li>Habituation exercises</li><li>Balance &amp; gait training</li><li>Home exercise programme</li></ul>
+        </div>
+        <div class="svc-card v" data-aos>
+          <h3>Balance &amp; Fall Prevention</h3>
+          <p>Comprehensive balance evaluation especially for elderly patients, post-surgical patients and those at fall risk.</p>
+          <ul><li>Romberg &amp; Tandem Romberg</li><li>Fall risk assessment</li><li>Computerised posturography</li><li>Elderly balance programme</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPEECH -->
+    <div id="speech" class="svc-cat">
+      <div class="sc-hdr sp">
+        <span class="sc-hdr-ico">🗣️</span>
+        <div><h2>Speech &amp; Language Therapy</h2><p>Professional therapy for communication, language and swallowing disorders in children and adults</p></div>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card sp" data-aos>
+          <h3>Auditory Verbal Therapy (AVT)</h3>
+          <p>Teaching children with hearing loss to listen and speak using their hearing aids or cochlear implants — maximising spoken language potential from the earliest age.</p>
+          <ul><li>Early intervention (6m–5 yrs)</li><li>Parent coaching sessions</li><li>CI &amp; hearing aid optimisation</li><li>Progress monitoring</li></ul>
+        </div>
+        <div class="svc-card sp" data-aos>
+          <h3>Language Delay &amp; Disorders</h3>
+          <p>Assessment and therapy for children with delayed speech development, language comprehension and expressive language difficulties.</p>
+          <ul><li>Formal language assessments</li><li>Vocabulary &amp; grammar therapy</li><li>Narrative skills training</li><li>School-readiness support</li></ul>
+        </div>
+        <div class="svc-card sp" data-aos>
+          <h3>Stuttering / Fluency Therapy</h3>
+          <p>Evidence-based fluency shaping and stuttering modification techniques for children and adults who stutter.</p>
+          <ul><li>Lidcombe programme (children)</li><li>Fluency shaping techniques</li><li>Stuttering modification</li><li>Confidence building</li></ul>
+        </div>
+        <div class="svc-card sp" data-aos>
+          <h3>Voice Disorders</h3>
+          <p>Assessment and treatment for hoarseness, vocal fatigue, pitch disorders, voice strain and post-surgical voice rehabilitation.</p>
+          <ul><li>Acoustic voice analysis</li><li>Vocal hygiene education</li><li>Voice therapy exercises</li><li>Post-surgical rehabilitation</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-cta">
+      <h3>Not sure which service you need?</h3>
+      <p>Book a free consultation and our audiologist will guide you to the right care pathway — no charge, no obligation.</p>
+      <div class="svc-cta-btns">
+        <a href="appointment.html" class="btn btn-or">Book Free Consultation</a>
+        <a href="https://wa.me/918197428456" class="btn btn-wa">💬 Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TESTS ══════════ -->
+<section class="sec sec-dk" id="tests">
+  <div class="wrap">
+    <div class="sec-hd inv">
+      <span class="tag inv">Diagnostic Tests</span>
+      <h2>22 State-of-the-Art <em>Diagnostic Tests</em></h2>
+      <p>Precision diagnosis is the foundation of effective treatment. Bhavana uses calibrated, latest-generation equipment for all tests.</p>
+    </div>
+    <div class="ttabs">
+      <button class="ttab act" data-panel="vp">🌀 Vertigo &amp; Balance Tests (12)</button>
+      <button class="ttab" data-panel="hp">👂 Hearing Tests (10)</button>
+    </div>
+    <div id="vp" class="tpanel act"><div class="tgrid" id="vtgrid"></div></div>
+    <div id="hp" class="tpanel"><div class="tgrid" id="htgrid"></div></div>
+  </div>
+</section>
+
+<!-- VISIT PROCESS -->
+<section class="sec sec-dk" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-hd inv"><span class="tag inv">Your Visit</span><h2>What to Expect <em>Step by Step</em></h2></div>
+    <div class="steps">
+      <div class="step" data-aos><div class="step-n">01</div><h4>Registration</h4><p>Brief intake form. No waiting — we value your time.</p></div>
+      <div class="step" data-aos><div class="step-n">02</div><h4>Case History</h4><p>Audiologist discusses your symptoms, medical history and concerns in detail.</p></div>
+      <div class="step" data-aos><div class="step-n">03</div><h4>Testing</h4><p>Relevant tests are performed — most take 30–45 minutes total.</p></div>
+      <div class="step" data-aos><div class="step-n">04</div><h4>Results &amp; Diagnosis</h4><p>Results explained clearly with audiogram / graphs in plain language.</p></div>
+      <div class="step" data-aos><div class="step-n">05</div><h4>Treatment Plan</h4><p>Personalised recommendations with all options and costs discussed transparently.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-hd"><span class="tag">FAQ</span><h2>Commonly Asked <em>Questions</em></h2></div>
+    <div class="faqs" id="faqList"></div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById("nav-placeholder").innerHTML  = window.navHTML;
+document.getElementById("footer-placeholder").innerHTML = window.footerHTML;
+initNav("services.html"); initAOS();
+
+/* Section nav highlight */
+document.querySelectorAll(".pg-nav a").forEach(a=>a.addEventListener("click",function(){
+  document.querySelectorAll(".pg-nav a").forEach(x=>x.classList.remove("act"));
+  this.classList.add("act");
+}));
+
+/* TEST DATA */
+const VTESTS = [
+  {n:"01",name:"VNG (Videonystagmography)",desc:"Measures eye movements with infrared video goggles to evaluate the vestibular system and detect causes of dizziness and imbalance."},
+  {n:"02",name:"Dix-Hallpike Test",desc:"Diagnoses BPPV by observing nystagmus and dizziness triggered by rapid head positioning manoeuvres in the clinic chair."},
+  {n:"03",name:"Caloric Test",desc:"Tests each ear's vestibular response independently to warm and cool stimuli — identifies which ear is underperforming."},
+  {n:"04",name:"OPK / Optokinetic Testing",desc:"Eye movement test using moving visual patterns — distinguishes central from peripheral vertigo causes."},
+  {n:"05",name:"Gaze Stability Testing",desc:"Checks for spontaneous nystagmus in different gaze directions — key diagnostic step for peripheral vs central vestibular disorders."},
+  {n:"06",name:"Positional Testing",desc:"Evaluates dizziness triggered by specific head and body positions to confirm BPPV and identify which canal is affected."},
+  {n:"07",name:"Smooth Pursuit Testing",desc:"Evaluates smooth tracking of slow-moving visual targets — tests cerebellar and central vestibular pathways."},
+  {n:"08",name:"Romberg / Balance Testing",desc:"Checks postural stability standing with eyes open and closed — screens for peripheral and central vestibular dysfunction."},
+  {n:"09",name:"Computerised Posturography",desc:"Advanced balance test to quantify sensory input and motor response in postural control — ideal for VRT progress monitoring."},
+  {n:"10",name:"Rotary Chair Test",desc:"Measures vestibulo-ocular reflex using controlled rotational movement — tests both labyrinths simultaneously."},
+  {n:"11",name:"VEMP (Vestibular Evoked Myogenic Potential)",desc:"Evaluates utricle and saccule function — detects superior canal dehiscence and Ménière's disease."},
+  {n:"12",name:"Epley / Semont Manoeuvre",desc:"Canalith repositioning procedure — moves displaced otoconia out of semicircular canals. Most BPPV patients cured in one session."},
+];
+const HTESTS = [
+  {n:"01",name:"Pure-Tone Audiometry",desc:"Measures hearing thresholds across 250–8000 Hz to determine the exact type, degree and configuration of hearing loss."},
+  {n:"02",name:"Speech Audiometry (SRT & SDS)",desc:"Tests speech detection and recognition thresholds — essential for hearing aid selection, programming and candidacy evaluation."},
+  {n:"03",name:"Impedance Audiometry (Tympanometry)",desc:"Evaluates middle ear pressure, fluid presence and eardrum compliance — diagnoses conductive hearing loss and glue ear."},
+  {n:"04",name:"OAE (Otoacoustic Emissions)",desc:"Tests outer cochlear hair cell function — gold standard for newborn hearing screening and fast objective cochlear assessment."},
+  {n:"05",name:"BERA / ABR Testing",desc:"Brainstem Evoked Response Audiometry — objective hearing measurement for infants and children who cannot cooperate with standard tests."},
+  {n:"06",name:"ASSR (Auditory Steady State Response)",desc:"Provides frequency-specific hearing thresholds in infants — essential for programming hearing aids in babies under 6 months."},
+  {n:"07",name:"Free Field Audiometry",desc:"Tests aided and unaided hearing inside a calibrated sound booth — directly verifies hearing aid benefit across frequencies."},
+  {n:"08",name:"Real-Ear Measurement (REM)",desc:"Gold-standard verification of hearing aid fitting accuracy — measures actual sound levels inside the ear canal while wearing the device."},
+  {n:"09",name:"Play Audiometry",desc:"Game-based hearing test for toddlers and preschool children (18 months – 5 years) — makes testing fun and accurate."},
+  {n:"10",name:"Behavioural Observation Audiometry",desc:"Evaluates hearing in very young infants by observing reflexive behavioural responses to sound stimuli."},
+];
+const FAQS = [
+  {q:"Is the initial hearing test free?",a:"Yes. Your first hearing assessment at Bhavana is completely free. This includes pure-tone audiometry, a brief case history, and a consultation with our audiologist."},
+  {q:"How long does a VNG test take?",a:"A VNG (Videonystagmography) test typically takes 45–60 minutes including case history. No special preparation is needed. Avoid alcohol and certain medications 48 hours before if possible."},
+  {q:"Can BPPV be cured in one visit?",a:"In most cases, yes. The Epley Manoeuvre successfully resolves BPPV in 80–90% of patients after just one or two repositioning sessions. Our vertigo specialist has performed over 2,000 successful procedures."},
+  {q:"Do I need to bring a referral?",a:"No referral is needed. You can walk in or book an appointment directly. We take a full case history and recommend the appropriate tests based on your symptoms."},
+  {q:"Can children get vertigo?",a:"Yes, vestibular disorders can occur in children. Common causes in children include vestibular migraine and labyrinthitis. We offer paediatric vestibular assessment."},
+  {q:"What is the difference between BERA and ASSR?",a:"BERA (ABR) gives an overall hearing threshold and checks the integrity of the auditory nerve. ASSR provides frequency-specific thresholds for each ear — essential for precisely fitting hearing aids in infants. We often use both together."},
+  {q:"Are home visits available for hearing tests?",a:"Yes. Bhavana provides home visit services for hearing assessments, hearing aid fittings, and follow-up appointments. This is especially useful for elderly patients or young infants. A nominal travel cost applies."},
+];
+
+function renderTests(data, id) {
+  const g=document.getElementById(id); if(!g) return;
+  g.innerHTML=data.map(t=>`<div class="tcard"><div class="tnum">${t.n}</div><h4>${t.name}</h4><p>${t.desc}</p></div>`).join("");
+}
+renderTests(VTESTS,"vtgrid");
+renderTests(HTESTS,"htgrid");
+
+document.querySelectorAll(".ttab").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".ttab").forEach(x=>x.classList.remove("act"));
+  document.querySelectorAll(".tpanel").forEach(x=>x.classList.remove("act"));
+  b.classList.add("act");
+  const p=document.getElementById(b.dataset.panel); if(p) p.classList.add("act");
+}));
+
+const fl=document.getElementById("faqList");
+if(fl){
+  fl.innerHTML=FAQS.map(f=>`<div class="faq"><div class="faq-q">${f.q}<span>▾</span></div><div class="faq-a"><p>${f.a}</p></div></div>`).join("");
+  fl.addEventListener("click",e=>{
+    const q=e.target.closest(".faq-q"); if(!q) return;
+    const faq=q.closest(".faq");
+    document.querySelectorAll(".faq.open").forEach(x=>{ if(x!==faq) x.classList.remove("open"); });
+    faq.classList.toggle("open");
+  });
+}
+</script>
+</body>
+</html>

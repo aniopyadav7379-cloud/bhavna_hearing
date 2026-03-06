@@ -1,0 +1,296 @@
+<!-- =====================================================
+     appointment.html — Book Appointment Page
+     ===================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Book Appointment | Bhavana Hearing & Vertigo Clinic Hyderabad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+<style>
+.aptl{display:grid;grid-template-columns:1fr 1.05fr;gap:4rem;align-items:start}
+.apti h2{font-family:var(--fh);font-size:clamp(1.9rem,3.4vw,2.8rem);color:#fff;line-height:1.2;margin-bottom:1rem}
+.apti h2 em{color:var(--or)}
+.apti>p{color:rgba(232,240,235,.62);margin-bottom:1.8rem}
+.aperks{list-style:none;display:flex;flex-direction:column;gap:.48rem;margin-bottom:1.8rem}
+.aperks li{color:rgba(232,240,235,.8);font-size:.9rem;display:flex;align-items:center;gap:.55rem}
+.pchk{width:21px;height:21px;border-radius:50%;background:rgba(232,98,42,.2);color:var(--or);display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0}
+.acbtns{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.acb{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.08);color:#fff;padding:.58rem 1.1rem;border-radius:50px;text-decoration:none;font-size:.86rem;font-weight:600;border:1px solid rgba(255,255,255,.18);transition:background var(--tr)}
+.acb:hover{background:rgba(255,255,255,.15)}
+.acb.wa{background:rgba(37,211,102,.14);border-color:rgba(37,211,102,.28);color:#4ade80}
+.aaddr{font-size:.8rem;color:rgba(232,240,235,.4);line-height:1.6;margin-top:.5rem}
+.afw{background:#fff;border-radius:var(--r);padding:2.5rem;box-shadow:var(--sh-lg)}
+.afw h3{font-family:var(--fh);font-size:1.45rem;margin-bottom:1.5rem}
+.af{display:flex;flex-direction:column;gap:.85rem}
+.fsuc{text-align:center;padding:2.5rem 1.5rem}
+.fsuc h4{font-family:var(--fh);font-size:1.4rem;margin:.5rem 0}
+.fsuc p{color:var(--text-lt);font-size:.88rem}
+/* Contact cards */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.3rem}
+.ccard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:1.6rem;text-align:center;transition:border-color var(--tr)}
+.ccard:hover{border-color:rgba(232,98,42,.4)}
+.cico{font-size:2rem;margin-bottom:.7rem}
+.ccard h4{color:var(--text-inv);font-size:.95rem;font-weight:700;margin-bottom:.4rem}
+.ccard p{color:rgba(232,240,238,.5);font-size:.83rem}
+.ccard strong{color:rgba(232,240,238,.85)}
+@media(max-width:900px){.aptl{grid-template-columns:1fr;gap:2.5rem}.afw{padding:1.6rem}}
+</style>
+</head>
+<body>
+
+<div id="preloader">
+  <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#e8622a" stroke-width="2" class="pl-ring"/><path d="M32 12C20.95 12 12 20.95 12 32c0 6.04 2.7 11.46 6.97 15.17l3.1-3.52A10.98 10.98 0 0118 32c0-7.73 6.27-14 14-14s14 6.27 14 14c0 4.32-1.96 8.17-5.05 10.75l3.1 3.52C48.3 43.46 51 38.04 51 32c0-11.05-8.95-20-19-20z" fill="#e8622a"/><circle cx="32" cy="32" r="4.5" fill="#e8622a"/></svg>
+  <strong>Bhavana</strong><span>Hearing &amp; Vertigo Clinic</span>
+</div>
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="tag">Free Consultation</span>
+    <h1>Book Your <em>Free</em><br>Appointment</h1>
+    <p>Free hearing test + vertigo screening + personalised treatment plan. Zero cost, zero obligation.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Book Appointment</span></div>
+  </div>
+</div>
+
+<section class="sec sec-cta">
+  <div class="wrap">
+    <div class="aptl">
+      <div class="apti">
+        <span class="tag inv">What's Included — Free</span>
+        <h2>Everything You Need,<br>at <em>Zero Cost</em></h2>
+        <p>Our free consultation includes a complete audiological evaluation and personalised treatment recommendations — fully transparent, no pressure.</p>
+        <ul class="aperks">
+          <li><span class="pchk">✓</span> Free pure-tone hearing test (worth ₹500)</li>
+          <li><span class="pchk">✓</span> Free vertigo / dizziness screening</li>
+          <li><span class="pchk">✓</span> Personalised treatment plan</li>
+          <li><span class="pchk">✓</span> Hearing aid trial available</li>
+          <li><span class="pchk">✓</span> Home visit option available</li>
+          <li><span class="pchk">✓</span> Family counselling included</li>
+          <li><span class="pchk">✓</span> No pressure, no obligation</li>
+        </ul>
+        <div class="acbtns">
+          <a href="tel:08197428456" class="acb">📞 081974 28456</a>
+          <a href="https://wa.me/918197428456" class="acb wa">💬 WhatsApp Us</a>
+        </div>
+        <p class="aaddr">📍 Shop No. 3, Shiva Shakti Complex, Trimulgherry X Road,<br>Secunderabad, Hyderabad – 500015<br><br>Mon–Sat: 10:00 AM – 7:00 PM · Sun: By Appointment</p>
+      </div>
+      <div class="afw">
+        <h3>Request Appointment</h3>
+        <form class="af" id="apptForm" novalidate>
+          <div class="frow">
+            <div class="fg"><label>Full Name <span class="req">*</span></label><input type="text" name="name" placeholder="Your full name" required/><span class="ferr"></span></div>
+            <div class="fg"><label>Age</label><input type="number" name="age" placeholder="Age in years" min="1" max="120"/></div>
+          </div>
+          <div class="frow">
+            <div class="fg"><label>Phone <span class="req">*</span></label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required/><span class="ferr"></span></div>
+            <div class="fg"><label>Email</label><input type="email" name="email" placeholder="email@example.com"/></div>
+          </div>
+          <div class="fg">
+            <label>Service Required <span class="req">*</span></label>
+            <select name="service" required>
+              <option value="">Select service...</option>
+              <optgroup label="Hearing Care">
+                <option>Hearing Assessment / Audiometry</option><option>Hearing Aid Fitting &amp; Trial</option>
+                <option>Paediatric Hearing Test (BERA/OAE)</option><option>Tinnitus Consultation</option>
+                <option>Cochlear Implant Counselling</option><option>Aural Rehabilitation</option>
+              </optgroup>
+              <optgroup label="Vertigo &amp; Balance">
+                <option>Vertigo / Dizziness Consultation</option><option>BPPV Treatment (Epley Manoeuvre)</option>
+                <option>VNG Testing</option><option>Vestibular Rehabilitation (VRT)</option><option>Balance Assessment</option>
+              </optgroup>
+              <optgroup label="Speech Therapy">
+                <option>Speech &amp; Language Therapy</option><option>Auditory Verbal Therapy (AVT)</option>
+                <option>Stuttering / Fluency Therapy</option><option>Voice Therapy</option>
+              </optgroup>
+              <option value="other">Other / Not Sure</option>
+            </select>
+            <span class="ferr"></span>
+          </div>
+          <div class="fg">
+            <label>Preferred Branch</label>
+            <select name="branch">
+              <option value="">Select nearest branch...</option>
+              <option>Trimulgherry, Secunderabad (Main Branch)</option>
+              <option>RTC X Road, Hyderabad</option>
+              <option>Kukatpally / KPHB, Hyderabad</option>
+              <option>Ghatkopar East, Mumbai</option>
+              <option>Home Visit Request</option>
+            </select>
+          </div>
+          <div class="frow">
+            <div class="fg"><label>Preferred Date</label><input type="date" name="date" id="apptDate"/></div>
+            <div class="fg"><label>Appointment Type</label>
+              <select name="apptType">
+                <option value="Clinic Visit">Clinic Visit</option>
+                <option value="Home Visit">Home Visit</option>
+                <option value="Video Consultation">Video Consultation</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg"><label>Describe Your Problem</label><textarea name="notes" rows="3" placeholder="Describe your hearing or balance concern..."></textarea></div>
+          <button type="submit" class="btn btn-or btn-full" id="asbtn">
+            <span id="abtnTxt">Confirm Appointment Request</span>
+            <span id="abtnLoad" style="display:none">Sending...</span>
+          </button>
+          <p class="form-note">We'll call you within 2 hours. Home visits at nominal travel cost only.</p>
+        </form>
+        <div id="apptSuc" class="fsuc" style="display:none">
+          <div style="font-size:3rem">🎉</div>
+          <h4>Appointment Request Sent!</h4>
+          <p>Our team will call you within 2 hours to confirm your appointment.<br>You can also reach us at <strong>081974 28456</strong> or <a href="https://wa.me/918197428456" style="color:var(--or)">WhatsApp us</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT QUICK CARDS -->
+<section class="sec sec-dk">
+  <div class="wrap">
+    <div class="sec-hd inv"><span class="tag inv">Get In Touch</span><h2>Contact <em>Options</em></h2></div>
+    <div class="cgrid">
+      <div class="ccard"><div class="cico">📞</div><h4>Call / WhatsApp</h4><p><strong>081974 28456</strong><br>Mon–Sat 10am–7pm</p><a href="tel:08197428456" class="btn-sm" style="margin-top:.7rem">Call Now</a></div>
+      <div class="ccard"><div class="cico">📍</div><h4>Main Branch</h4><p>Shiva Shakti Complex<br>Trimulgherry X Road<br><strong>Secunderabad – 500015</strong></p></div>
+      <div class="ccard"><div class="cico">🕐</div><h4>Working Hours</h4><p>Mon–Saturday: <strong>10am–7pm</strong><br>Sunday: <strong>By Appointment</strong></p></div>
+      <div class="ccard"><div class="cico">🏠</div><h4>Home Visits</h4><p>Testing, fitting &amp; follow-up at your home.<br>Nominal travel cost.</p><a href="https://wa.me/918197428456" class="btn-sm btn-wa-sm" style="margin-top:.7rem">Book via WhatsApp</a></div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById("nav-placeholder").innerHTML = window.navHTML;
+document.getElementById("footer-placeholder").innerHTML = window.footerHTML;
+initNav("appointment.html"); initAOS();
+
+// Set min date
+const ad=document.getElementById("apptDate");
+if(ad){ const d=new Date(); d.setDate(d.getDate()+1); ad.min=d.toISOString().split("T")[0]; }
+
+// Form
+const f=document.getElementById("apptForm");
+if(f) {
+  f.querySelectorAll("input,select,textarea").forEach(el=>{
+    el.addEventListener("blur",()=>validateField(el));
+    el.addEventListener("input",()=>{ if(el.classList.contains("err")) validateField(el); });
+  });
+  f.addEventListener("submit",async e=>{
+    e.preventDefault();
+    let ok=true;
+    f.querySelectorAll("[required]").forEach(el=>{ if(!validateField(el)) ok=false; });
+    if(!ok){ showToast("Please fill in all required fields."); return; }
+    const bt=document.getElementById("abtnTxt"), bl=document.getElementById("abtnLoad"), sb=document.getElementById("asbtn");
+    if(bt) bt.style.display="none"; if(bl) bl.style.display="inline"; if(sb) sb.disabled=true;
+    try{ await submitAppointment(Object.fromEntries(new FormData(f))); }catch(_){}
+    f.style.display="none";
+    document.getElementById("apptSuc").style.display="block";
+  });
+}
+</script>
+</body></html>
+
+<!-- =====================================================
+     SAVE BELOW AS: backend/server.js
+     ===================================================== -->
+<!--
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const helmet = require("helmet");
+const rateLimit = require("express-rate-limit");
+const morgan = require("morgan");
+require("dotenv").config();
+
+const app = express();
+app.use(helmet({ contentSecurityPolicy: false }));
+app.use(cors({ origin: process.env.CLIENT_URL || "*" }));
+app.use(express.json());
+app.use(morgan("dev"));
+
+// Rate limiting
+app.use("/api/", rateLimit({ windowMs: 15*60*1000, max: 200 }));
+
+// Static frontend
+app.use(express.static("../frontend"));
+
+// Routes
+app.use("/api/appointments", require("./routes/appointments"));
+app.use("/api/products",     require("./routes/products"));
+app.use("/api/branches",     require("./routes/branches"));
+app.use("/api/team",         require("./routes/team"));
+app.use("/api/blog",         require("./routes/blog"));
+app.use("/api/contact",      require("./routes/contact"));
+app.use("/api/auth",         require("./routes/auth"));
+
+// DB
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => { console.log("✅ MongoDB connected"); app.listen(process.env.PORT||5000, ()=>console.log("🚀 Server on port "+(process.env.PORT||5000))); })
+  .catch(err => { console.error("❌ DB Error:", err); process.exit(1); });
+-->
+
+<!-- =====================================================
+     SAVE BELOW AS: backend/routes/appointments.js
+     ===================================================== -->
+<!--
+const express = require("express");
+const router = express.Router();
+const rateLimit = require("express-rate-limit");
+const { body, validationResult } = require("express-validator");
+const Appointment = require("../models/Appointment");
+const { sendMail } = require("../middleware/mailer");
+const { protect, restrictTo } = require("../middleware/auth");
+
+const apptLimiter = rateLimit({ windowMs:60*60*1000, max:5, message:{error:"Too many requests. Please try again in 1 hour."} });
+
+// POST /api/appointments — Public submission
+router.post("/", apptLimiter, [
+  body("name").trim().notEmpty().withMessage("Name is required"),
+  body("phone").trim().notEmpty().withMessage("Phone is required"),
+  body("service").trim().notEmpty().withMessage("Service is required"),
+], async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) return res.status(422).json({ errors: errors.array() });
+  try {
+    const appt = await Appointment.create({
+      name: req.body.name, phone: req.body.phone, email: req.body.email,
+      age: req.body.age, service: req.body.service, branch: req.body.branch,
+      date: req.body.date, type: req.body.type||"clinic", notes: req.body.notes,
+      status: "pending", ip: req.ip
+    });
+    // Send confirmation email
+    if(req.body.email) {
+      sendMail(req.body.email, `Appointment Request Confirmed — Bhavana Hearing`,
+        `<h2>Hi ${req.body.name},</h2><p>We have received your appointment request for <strong>${req.body.service}</strong>.</p><p>Our team will call you on <strong>${req.body.phone}</strong> within 2 hours to confirm your appointment.</p><p>Branch: ${req.body.branch||"Main Branch — Trimulgherry"}</p><br><p>For urgent queries: <a href="tel:08197428456">081974 28456</a> or <a href="https://wa.me/918197428456">WhatsApp</a></p><br><p>— Bhavana Hearing &amp; Vertigo Clinic, Hyderabad</p>`
+      ).catch(()=>{});
+    }
+    // Alert admin
+    sendMail(process.env.ADMIN_EMAIL, `New Appointment: ${req.body.name} — ${req.body.service}`,
+      `<p><b>Name:</b> ${req.body.name}<br><b>Phone:</b> ${req.body.phone}<br><b>Service:</b> ${req.body.service}<br><b>Branch:</b> ${req.body.branch||"Not specified"}<br><b>Date:</b> ${req.body.date||"Flexible"}<br><b>Type:</b> ${req.body.type}<br><b>Notes:</b> ${req.body.notes||"—"}</p>`
+    ).catch(()=>{});
+    res.status(201).json({ success: true, id: appt._id, message: "Appointment request received" });
+  } catch(err) { res.status(500).json({ error: "Server error" }); }
+});
+
+// GET /api/appointments — Admin/Staff only
+router.get("/", protect, restrictTo("admin","staff"), async (req, res) => {
+  const { page=1, limit=20, status } = req.query;
+  const filter = status ? { status } : {};
+  const total = await Appointment.countDocuments(filter);
+  const appts = await Appointment.find(filter).sort({createdAt:-1}).skip((page-1)*limit).limit(Number(limit));
+  res.json({ appts, total, pages: Math.ceil(total/limit), page: Number(page) });
+});
+
+// PATCH /api/appointments/:id — Update status
+router.patch("/:id", protect, restrictTo("admin","staff"), async (req, res) => {
+  const appt = await Appointment.findByIdAndUpdate(req.params.id, { status: req.body.status, notes: req.body.notes }, { new:true });
+  if(!appt) return res.status(404).json({ error: "Not found" });
+  res.json({ success: true, appt });
+});
+
+module.exports = router;
+-->

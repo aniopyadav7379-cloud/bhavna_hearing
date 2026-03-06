@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About Us &amp; Our Team | Bhavana Hearing &amp; Vertigo Clinic Hyderabad</title>
+<meta name="description" content="About Bhavana Hearing &amp; Vertigo Clinic — 14 years of trusted hearing and vertigo care in Hyderabad. Meet our expert audiologists and speech therapists."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+<style>
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.about-l h2{font-family:var(--fh);font-size:clamp(1.9rem,3.5vw,2.8rem);color:var(--text-inv);line-height:1.2;margin-bottom:1rem}
+.about-l h2 em{color:var(--or);font-style:italic}
+.about-l>p{color:rgba(232,240,238,.6);margin-bottom:.85rem;font-size:.9rem;line-height:1.72}
+.avlist{display:flex;flex-direction:column;gap:.85rem;margin-top:1.4rem}
+.av{display:flex;align-items:flex-start;gap:.75rem}
+.av>span{font-size:1.25rem;flex-shrink:0;margin-top:2px}
+.av strong{display:block;color:var(--text-inv);font-size:.93rem}
+.av p{color:rgba(232,240,238,.48);font-size:.83rem;margin:0}
+.asgrid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.4rem}
+.ascard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:1.3rem;text-align:center}
+.ascard strong{display:block;font-family:var(--fh);font-size:2.2rem;color:var(--or);line-height:1}
+.ascard span{color:rgba(232,240,238,.48);font-size:.79rem}
+.cbadges{display:flex;flex-direction:column;gap:.55rem}
+.cbadge{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:8px;padding:.52rem 1rem;font-size:.83rem;color:rgba(232,240,238,.68)}
+.timeline{position:relative;padding-left:2rem;border-left:2px solid rgba(232,98,42,.2)}
+.tl-item{position:relative;margin-bottom:2rem;padding-left:1.5rem}
+.tl-item::before{content:'';position:absolute;left:-2.5rem;top:.4rem;width:12px;height:12px;border-radius:50%;background:var(--or);border:2px solid rgba(232,98,42,.3)}
+.tl-year{font-size:.74rem;font-weight:700;color:var(--or);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.18rem}
+.tl-item h4{color:var(--text-inv);font-size:.95rem;font-weight:700;margin-bottom:.18rem}
+.tl-item p{color:rgba(232,240,238,.48);font-size:.83rem}
+.founder-card{background:var(--bg-dark);border-radius:var(--r);overflow:hidden;margin-bottom:3rem;display:grid;grid-template-columns:320px 1fr}
+.fc-photo{background:linear-gradient(135deg,rgba(232,98,42,.2),rgba(0,118,108,.15));display:flex;align-items:center;justify-content:center;min-height:300px;overflow:hidden}
+.fc-photo img{width:100%;height:100%;object-fit:cover;object-position:top}
+.fc-body{padding:2.2rem}
+.fc-tag{display:inline-block;background:rgba(232,98,42,.2);color:var(--or-lt);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:.2rem .7rem;border-radius:50px;margin-bottom:.9rem}
+.fc-body h2{font-family:var(--fh);font-size:2rem;color:#fff;margin-bottom:.25rem}
+.fc-role{font-size:.88rem;font-weight:600;color:var(--or);margin-bottom:.4rem}
+.fc-qual{font-size:.8rem;color:rgba(255,255,255,.48);margin-bottom:1.1rem;line-height:1.6}
+.fc-body p{color:rgba(255,255,255,.62);font-size:.88rem;margin-bottom:.9rem;line-height:1.7}
+.fc-body blockquote{border-left:3px solid var(--or);padding:.65rem .95rem;background:rgba(232,98,42,.08);font-style:italic;font-size:.86rem;color:rgba(255,255,255,.68);margin-bottom:1.1rem;border-radius:0 8px 8px 0}
+.fc-specs{display:flex;flex-wrap:wrap;gap:.32rem;margin-bottom:1.2rem}
+.fc-spec{font-size:.73rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.68);padding:.18rem .58rem;border-radius:50px}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.8rem}
+.member-card{background:#fff;border:1px solid var(--bd-lt);border-radius:var(--r);overflow:hidden;transition:transform var(--tr),box-shadow var(--tr)}
+.member-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg)}
+.mc-photo{height:230px;background:linear-gradient(135deg,rgba(232,98,42,.08),rgba(0,118,108,.07));display:flex;align-items:center;justify-content:center;overflow:hidden}
+.mc-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.mc-body{padding:1.3rem}
+.mc-name{font-family:var(--fh);font-size:1.2rem;font-weight:700;margin-bottom:.15rem}
+.mc-role{font-size:.81rem;font-weight:600;color:var(--or);margin-bottom:.22rem}
+.mc-qual{font-size:.74rem;color:var(--text-lt);margin-bottom:.65rem;line-height:1.5}
+.mc-branch{display:inline-flex;align-items:center;gap:.28rem;font-size:.72rem;background:var(--bg-alt);padding:.18rem .56rem;border-radius:50px;margin-bottom:.8rem;color:var(--text-lt)}
+.mc-specs{display:flex;flex-wrap:wrap;gap:.28rem;margin-bottom:.8rem}
+.mc-spec{font-size:.68rem;background:rgba(232,98,42,.08);border:1px solid rgba(232,98,42,.14);color:var(--or);padding:.13rem .5rem;border-radius:50px}
+.mc-bio{font-size:.82rem;color:var(--text-lt);line-height:1.65;margin-bottom:.8rem}
+.mc-quote{border-left:3px solid var(--or);padding:.55rem .85rem;background:rgba(232,98,42,.04);font-style:italic;font-size:.8rem;color:var(--text);margin-bottom:.9rem;border-radius:0 6px 6px 0}
+.mc-footer{display:flex;gap:.45rem;margin-top:.8rem}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.3rem}
+.tcard{background:#fff;border:1px solid var(--bd-lt);border-radius:var(--r);padding:1.4rem;transition:transform var(--tr),box-shadow var(--tr)}
+.tcard:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.tstars{color:#f59e0b;font-size:.93rem;margin-bottom:.7rem}
+.ttxt{font-size:.87rem;font-style:italic;margin-bottom:.9rem;line-height:1.65}
+.tauth{display:flex;align-items:center;gap:.62rem}
+.tav{width:34px;height:34px;border-radius:50%;background:var(--or);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.74rem;font-weight:700;flex-shrink:0}
+.tname{font-weight:600;font-size:.84rem}
+.tloc{font-size:.72rem;color:var(--text-lt)}
+@media(max-width:768px){
+  .about-grid,.founder-card{grid-template-columns:1fr}
+  .fc-photo{min-height:220px}
+  .team-grid{grid-template-columns:1fr}
+  .asgrid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<div id="preloader">
+  <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#e8622a" stroke-width="2" class="pl-ring"/><path d="M32 12C20.95 12 12 20.95 12 32c0 6.04 2.7 11.46 6.97 15.17l3.1-3.52A10.98 10.98 0 0118 32c0-7.73 6.27-14 14-14s14 6.27 14 14c0 4.32-1.96 8.17-5.05 10.75l3.1 3.52C48.3 43.46 51 38.04 51 32c0-11.05-8.95-20-19-20z" fill="#e8622a"/><circle cx="32" cy="32" r="4.5" fill="#e8622a"/></svg>
+  <strong>Bhavana</strong><span>Hearing &amp; Vertigo Clinic</span>
+</div>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="tag">About Bhavana</span>
+    <h1>Hyderabad's Trusted<br><em>Hearing &amp; Vertigo</em> Clinic</h1>
+    <p>14+ years of compassionate, transparent hearing and vestibular care — and the expert team behind it.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>About Us</span></div>
+  </div>
+</div>
+
+
+<!-- =====================================================
+  ✏️ SECTION 1 — OUR STORY
+  Edit the text, stats and badges directly below
+====================================================== -->
+<section class="sec sec-dk">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-l">
+        <span class="tag inv">Our Story</span>
+        <h2>Expert Care.<br><em>Transparent</em> Pricing.<br>Trusted Since 2010.</h2>
+        <p>Bhavana Hearing &amp; Vertigo Clinic was founded in 2010 by Dr. Amit Maurya with a single mission — to bring world-class hearing healthcare to patients in Hyderabad at fair, transparent prices. No upselling, no hidden costs, no pressure.</p>
+        <p>From a single room in Trimulgherry, Bhavana has grown into a multi-branch clinic serving patients across Telangana, Andhra Pradesh and Mumbai — with a team of expert audiologists and speech-language therapists.</p>
+        <blockquote style="border-left:3px solid var(--or);padding:.8rem 1.1rem;background:rgba(232,98,42,.08);font-style:italic;font-size:.9rem;color:rgba(232,240,238,.75);border-radius:0 8px 8px 0;margin:1.2rem 0">
+          "From past 10 years, I'm using hearing aids from Bhavana. The suggestions are very helpful. I can hear properly now."
+          <cite style="font-style:normal;font-size:.78rem;opacity:.6;display:block;margin-top:.3rem">— Long-term patient, Hyderabad</cite>
+        </blockquote>
+        <div class="avlist">
+          <div class="av"><span>💛</span><div><strong>No Hidden Costs</strong><p>Completely transparent pricing. What we quote is exactly what you pay.</p></div></div>
+          <div class="av"><span>🏠</span><div><strong>Home Services</strong><p>Testing, fitting, delivery and follow-ups at your doorstep.</p></div></div>
+          <div class="av"><span>👨‍👩‍👧</span><div><strong>Family-Centred Care</strong><p>We counsel families and involve them in every step of the journey.</p></div></div>
+          <div class="av"><span>⚡</span><div><strong>Fast Response</strong><p>We respond within 45 minutes on WhatsApp and call back within 2 hours.</p></div></div>
+        </div>
+      </div>
+      <div class="about-r">
+        <div class="asgrid">
+          <div class="ascard"><strong>14+</strong><span>Years of Service</span></div>
+          <div class="ascard"><strong>4.8★</strong><span>JustDial Rating</span></div>
+          <div class="ascard"><strong>295+</strong><span>Patient Reviews</span></div>
+          <div class="ascard"><strong>4</strong><span>Branches</span></div>
+        </div>
+        <div class="cbadges">
+          <div class="cbadge">✅ Verified JustDial Business — Hyderabad</div>
+          <div class="cbadge">🏥 14 Years in Hearing Healthcare</div>
+          <div class="cbadge">⚡ Responds in Under 45 Minutes</div>
+          <div class="cbadge">📱 WhatsApp Support Available Daily</div>
+          <div class="cbadge">🏠 Home Visit Service Available</div>
+          <div class="cbadge">💳 EMI Available on All Hearing Aids</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================
+  ✏️ SECTION 2 — JOURNEY TIMELINE
+  Edit year, heading, description for each milestone
+====================================================== -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-hd"><span class="tag">Our Journey</span><h2>14 Years of <em>Growth</em> &amp; Service</h2></div>
+    <div style="max-width:640px;margin:0 auto">
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-year">2010</div>
+          <h4 style="color: red">Founded in Trimulgherry</h4>
+          <p>Dr. Amit Maurya opened the first Bhavana Hearing Clinic in Secunderabad with a mission of transparent, patient-first hearing care.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2013</div>
+          <h4 style="color: red">Vertigo Services Added</h4>
+          <p>Expanded into vestibular diagnostics and BPPV treatment — one of the first clinics in Hyderabad to offer comprehensive VNG testing.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2015</div>
+          <h4 style="color: red">RTC X Road Branch Opened</h4>
+          <p>Opened second branch at RTC X Road, making Bhavana accessible to central Hyderabad patients.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2018</div>
+          <h4 style="color: red">Paediatric Audiology Programme</h4>
+          <p>Launched dedicated paediatric hearing and speech therapy programme with BERA, OAE and AVT services for children.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2020</div>
+          <h4 style="color: red">Kukatpally Branch &amp; Home Services</h4>
+          <p>Opened KPHB branch and formalised home visit service — bringing hearing care directly to patients' homes across Hyderabad.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2022</div>
+          <h4 style="color: red">Mumbai Branch — Ghatkopar East</h4>
+          <p>Expanded to Maharashtra, extending Bhavana's transparent hearing care to Mumbai patients.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2024</div>
+          <h4 style="color: red">295+ Reviews · 4.8★ Rating</h4>
+          <p>Reached 295 patient reviews on JustDial with a 4.8-star rating — a testament to 14 years of honest, quality care.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================
+  📸 SECTION 3 — FOUNDER + TEAM
+  HOW TO CHANGE A PHOTO:
+    1. Save your new photo in the assets/team/ folder
+    2. Find the team member below
+    3. Change  src="assets/team/FILENAME.png"
+       to      src="assets/team/YOUR-NEW-PHOTO.jpg"
+  HOW TO CHANGE A NAME / TEXT:
+    Just edit the text directly — it is plain HTML!
+====================================================== -->
+<section class="sec sec-alt" id="team">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="tag">Meet the Team</span>
+      <h2>Expert <em>Audiologists</em> &amp; Therapists</h2>
+      <p>Our experienced team across all Bhavana branches.</p>
+    </div>
+
+
+    <!-- ┌─────────────────────────────────────────┐
+         │  FOUNDER — Dr. Amit Maurya              │
+         │  📸 Photo: assets/team/amit-maurya.png  │
+         └─────────────────────────────────────────┘ -->
+    <div class="founder-card">
+      <div class="fc-photo">
+        <img src="D:\bhavna image\Amit sir founder.png" alt="Dr. Amit Maurya"/>
+        <!-- TO CHANGE PHOTO: replace  amit-maurya.png  with your new filename above -->
+      </div>
+      <div class="fc-body">
+        <span class="fc-tag">Founder &amp; Chief Audiologist</span>
+        <h2>Dr. Amit Maurya</h2><!-- ✏️ Change name here -->
+        <div class="fc-role">Founder &amp; Chief Audiologist</div><!-- ✏️ Change role here -->
+        <div class="fc-qual">M.Sc. Audiology &amp; Speech-Language Pathology | 14+ Years Experience</div><!-- ✏️ Change qualification here -->
+        <p>With over 14 years of experience, Dr. Amit Maurya founded Bhavana Hearing &amp; Vertigo Clinic with a mission to bring transparent, world-class hearing healthcare to Hyderabad. He believes every patient deserves honest advice and fair pricing.</p><!-- ✏️ Change bio here -->
+        <blockquote>"I treat every patient the way I would want my own family to be treated — with honesty, care and no hidden costs."</blockquote><!-- ✏️ Change quote here -->
+        <div class="fc-specs">
+          <!-- ✏️ Add or remove specialties here -->
+          <span class="fc-spec">✓ Hearing Aid Fitting &amp; Programming</span>
+          <span class="fc-spec">✓ Cochlear Implant Support</span>
+          <span class="fc-spec">✓ Adult &amp; Paediatric Audiology</span>
+          <span class="fc-spec">✓ Tinnitus Management</span>
+        </div>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+          <a href="appointment.html" class="btn btn-or" style="font-size:.82rem;padding:.6rem 1.3rem">Book Consultation</a>
+          <a href="https://wa.me/918197428456" class="btn btn-ghost" style="font-size:.82rem;padding:.6rem 1.3rem">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sec-hd" style="margin-top:1.5rem;margin-bottom:2rem">
+      <span class="tag">Our Specialists</span>
+      <h2>The Full <em>Bhavana</em> Team</h2>
+    </div>
+
+    <div class="team-grid">
+
+
+      <!-- ┌──────────────────────────────────────────┐
+           │  TEAM MEMBER 1 — Akhila Ma'am            │
+           │  📸 Photo: assets/team/akhila-co.png     │
+           └──────────────────────────────────────────┘ -->
+      <div class="member-card">
+        <div class="mc-photo">
+          <img src="D:\bhavna image\Akhila Mam Co.png"  style="height: 450px" alt="Akhila Mam"/>
+          <!-- TO CHANGE PHOTO: replace  akhila-co.png  above -->
+        </div>
+        <div class="mc-body">
+          <div class="mc-name">Akhila Ma'am</div><!-- ✏️ Name -->
+          <div class="mc-role">Co-Founder &amp; Senior Audiologist</div><!-- ✏️ Role -->
+          <div class="mc-qual">M.Sc. Audiology &amp; Speech-Language Pathology | 10+ Years</div><!-- ✏️ Qualification -->
+          <div class="mc-branch">📍 Trimulgherry Main Branch</div><!-- ✏️ Branch -->
+          <div class="mc-specs">
+            <span class="mc-spec">Paediatric Audiology</span>
+            <span class="mc-spec">BERA / ABR Testing</span>
+            <span class="mc-spec">OAE Screening</span>
+            <span class="mc-spec">Auditory Verbal Therapy</span>
+          </div>
+          <p class="mc-bio">Akhila Ma'am co-leads Bhavana Hearing Clinic, specialising in paediatric audiology and newborn hearing screening programmes.</p><!-- ✏️ Bio -->
+          <div class="mc-quote">"Every child deserves to hear clearly. Early detection changes everything."</div><!-- ✏️ Quote -->
+          <div class="mc-footer">
+            <a href="appointment.html" class="btn-sm" style="font-size:.72rem">Book Appointment</a>
+            <a href="https://wa.me/918197428456" class="btn-sm btn-wa-sm" style="font-size:.72rem">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ┌──────────────────────────────────────────────┐
+           │  TEAM MEMBER 2 — Dr. Venkat Sir (Partner)   │
+           │  📸 Photo: assets/team/venkat-partner.png   │
+           └──────────────────────────────────────────────┘ -->
+      <div class="member-card">
+        <div class="mc-photo">
+          <img src="D:\bhavna image\Venkat Sir Patner.png"  style="height:450px" alt="Dr. Venkat Sir"/>
+          <!-- TO CHANGE PHOTO: replace  venkat-partner.png  above -->
+        </div>
+        <div class="mc-body">
+          <div class="mc-name">Dr. Venkat Sir</div>
+          <div class="mc-role">Partner &amp; Vestibular Specialist</div>
+          <div class="mc-qual">M.Sc. Audiology | Vestibular Rehabilitation Certified | 7 Years</div>
+          <div class="mc-branch">📍 Trimulgherry Main Branch</div>
+          <div class="mc-specs">
+            <span class="mc-spec">VNG Testing</span>
+            <span class="mc-spec">BPPV &amp; Epley Manoeuvre</span>
+            <span class="mc-spec">Vestibular Rehab (VRT)</span>
+            <span class="mc-spec">Ménière's Disease</span>
+          </div>
+          <p class="mc-bio">Dr. Venkat Sir is Bhavana's partner and leading vestibular specialist, with expertise in diagnosing and treating dizziness, BPPV and balance disorders.</p>
+          <div class="mc-quote">"Most BPPV patients leave the clinic without dizziness after a single session."</div>
+          <div class="mc-footer">
+            <a href="appointment.html" class="btn-sm" style="font-size:.72rem">Book Appointment</a>
+            <a href="https://wa.me/918197428456" class="btn-sm btn-wa-sm" style="font-size:.72rem">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ┌────────────────────────────────────────────┐
+           │  TEAM MEMBER 3 — Dr. Shivani Arora        │
+           │  📸 Photo: assets/team/shivani-arora.webp │
+           └────────────────────────────────────────────┘ -->
+      <div class="member-card">
+        <div class="mc-photo">
+          <img src="D:\bhavna image\Team member.png" style="height: 450px" alt="Dr. Shivani Arora"/>
+          <!-- TO CHANGE PHOTO: replace  shivani-arora.webp  above -->
+        </div>
+        <div class="mc-body">
+          <div class="mc-name">Dr. Shivani Arora</div>
+          <div class="mc-role">Speech-Language Therapist</div>
+          <div class="mc-qual">M.Sc. Speech-Language Pathology | 6 Years</div>
+          <div class="mc-branch">📍 Trimulgherry &amp; RTC X Road</div>
+          <div class="mc-specs">
+            <span class="mc-spec">Auditory Verbal Therapy</span>
+            <span class="mc-spec">Language Delay</span>
+            <span class="mc-spec">Stuttering Therapy</span>
+            <span class="mc-spec">Voice Rehabilitation</span>
+          </div>
+          <p class="mc-bio">Dr. Shivani Arora has helped hundreds of children with hearing loss develop spoken language skills through dedicated speech therapy.</p>
+          <div class="mc-quote">"With the right therapy at the right time, every child can find their voice."</div>
+          <div class="mc-footer">
+            <a href="appointment.html" class="btn-sm" style="font-size:.72rem">Book Appointment</a>
+            <a href="https://wa.me/918197428456" class="btn-sm btn-wa-sm" style="font-size:.72rem">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ┌────────────────────────────────────────┐
+           │  TEAM MEMBER 4 — Dr. Raviteja          │
+           │  📸 Photo: assets/team/dr-ravitega.png │
+           └────────────────────────────────────────┘ -->
+      <div class="member-card">
+        <div class="mc-photo">
+          <img src="D:\bhavna image\dr-ravitega.png" style="height: 450px" alt="Dr. Raviteja"/>
+          <!-- TO CHANGE PHOTO: replace  dr-ravitega.png  above -->
+        </div>
+        <div class="mc-body">
+          <div class="mc-name">Dr. Raviteja</div>
+          <div class="mc-role">Audiologist</div>
+          <div class="mc-qual">M.Sc. Audiology | 5 Years</div>
+          <div class="mc-branch">📍 RTC X Road Branch</div>
+          <div class="mc-specs">
+            <span class="mc-spec">Hearing Assessment</span>
+            <span class="mc-spec">Hearing Aid Fitting</span>
+            <span class="mc-spec">Tinnitus Assessment</span>
+            <span class="mc-spec">Real-Ear Measurement</span>
+          </div>
+          <p class="mc-bio">Dr. Raviteja is known for meticulous attention to detail in hearing assessment and hearing aid programming at the RTC X Road branch.</p>
+          <div class="mc-quote">"A well-fitted hearing aid is life-changing. I take every fitting seriously."</div>
+          <div class="mc-footer">
+            <a href="appointment.html" class="btn-sm" style="font-size:.72rem">Book Appointment</a>
+            <a href="https://wa.me/918197428456" class="btn-sm btn-wa-sm" style="font-size:.72rem">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ┌──────────────────────────────────────┐
+           │  TEAM MEMBER 5 — Dr. Ablish          │
+           │  📸 Photo: assets/team/dr-ablish.png │
+           └──────────────────────────────────────┘ -->
+      <div class="member-card">
+        <div class="mc-photo">
+          <img src="D:\bhavna image\dr-ablish.png" style="height:500px" alt="Dr. Ablish"/>
+          <!-- TO CHANGE PHOTO: replace  dr-ablish.png  above -->
+        </div>
+        <div class="mc-body">
+          <div class="mc-name">Dr. Ablish</div>
+          <div class="mc-role">Senior Audiologist</div>
+          <div class="mc-qual">M.Sc. Audiology | 6 Years</div>
+          <div class="mc-branch">📍 Kukatpally / KPHB Branch</div>
+          <div class="mc-specs">
+            <span class="mc-spec">Hearing Assessment</span>
+            <span class="mc-spec">Paediatric Screening</span>
+            <span class="mc-spec">Hearing Aid Trials</span>
+            <span class="mc-spec">Cochlear Implant Mapping</span>
+          </div>
+          <p class="mc-bio">Dr. Ablish provides comprehensive hearing care across Bhavana branches, specialising in adult and paediatric hearing assessments.</p>
+          <div class="mc-quote">"I believe in making hearing care simple, accessible, and affordable for everyone."</div>
+          <div class="mc-footer">
+            <a href="appointment.html" class="btn-sm" style="font-size:.72rem">Book Appointment</a>
+            <a href="https://wa.me/918197428456" class="btn-sm btn-wa-sm" style="font-size:.72rem">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ╔══════════════════════════════════════════╗
+           ║  ➕ TO ADD A NEW TEAM MEMBER:            ║
+           ║  Copy one member block above (from       ║
+           ║  <!-- TEAM MEMBER X --><!-- to its </div>)   ║
+           ║  Paste here and change the details.      ║
+           ╚══════════════════════════════════════════╝ -->
+
+
+    </div><!-- end team-grid -->
+  </div>
+</section>
+
+
+<!-- =====================================================
+  ✏️ SECTION 4 — PATIENT TESTIMONIALS
+  To edit: change name, location, star count and text
+  To add: copy one .tcard block and paste a new one
+====================================================== -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-hd"><span class="tag">Patient Stories</span><h2>What Our <em>Patients</em> Say</h2></div>
+    <div class="tgrid">
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div><!-- Change number of ★ for rating -->
+        <p class="ttxt">"Mr. Venkat was very patient. He explained the current situation and proposed options accordingly. My father is feeling better now with his hearing."</p>
+        <div class="tauth">
+          <div class="tav">SB</div><!-- Change initials to match name -->
+          <div>
+            <div class="tname">Suresh Babu</div><!-- ✏️ Patient name -->
+            <div class="tloc">Trimulgherry, Hyderabad · Jan 2024</div><!-- ✏️ Location · Date -->
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <p class="ttxt">"The employees are compassionate and helpful. There are no hidden costs and all transactions are transparent. The home service feature is amazing!"</p>
+        <div class="tauth">
+          <div class="tav">PS</div>
+          <div>
+            <div class="tname">Priya S.</div>
+            <div class="tloc">Secunderabad · Feb 2024</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <p class="ttxt">"From past 10 years, I'm using hearing aids from Bhavana. The suggestions are very helpful and I can hear properly now."</p>
+        <div class="tauth">
+          <div class="tav">RK</div>
+          <div>
+            <div class="tname">Ravi Kumar</div>
+            <div class="tloc">LB Nagar, Hyderabad · Mar 2024</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <p class="ttxt">"I consulted Bhavana for sudden hearing loss. They explained so clearly and gave proper counselling. It is getting better now!"</p>
+        <div class="tauth">
+          <div class="tav">LD</div>
+          <div>
+            <div class="tname">Lakshmi Devi</div>
+            <div class="tloc">Secunderabad · Dec 2023</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <p class="ttxt">"Bhavana Hearing Care gave a very good feeling. Polite, explained very clearly, very reliable and genuine. I wholeheartedly believe in their service."</p>
+        <div class="tauth">
+          <div class="tav">AR</div>
+          <div>
+            <div class="tname">Anand Rao</div>
+            <div class="tloc">Warangal · Nov 2023</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <p class="ttxt">"The home service is brilliant! They came for testing, trial and delivery at petrol cost only. No other clinic in Mumbai provides this service."</p>
+        <div class="tauth">
+          <div class="tav">MP</div>
+          <div>
+            <div class="tname">Meena P.</div>
+            <div class="tloc">Ghatkopar, Mumbai · Oct 2023</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="sec sec-cta">
+  <div class="wrap" style="text-align:center;max-width:580px;margin:0 auto">
+    <span class="tag inv">Free Consultation</span>
+    <h2 style="font-family:var(--fh);font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;margin:1rem 0">Ready to Experience <em>Better Hearing?</em></h2>
+    <p style="color:rgba(232,240,238,.55);margin-bottom:1.8rem">Book your free consultation today — no charges, no obligation.</p>
+    <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
+      <a href="appointment.html" class="btn btn-or">Book Free Appointment</a>
+      <a href="https://wa.me/918197428456" class="btn btn-ghost">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<div id="cart-placeholder"></div>
+
+<!-- shared.js used ONLY for navbar, footer and cart -->
+<script src="shared.js"></script>
+<script>
+document.getElementById("nav-placeholder").innerHTML   = window.navHTML;
+document.getElementById("footer-placeholder").innerHTML = window.footerHTML;
+document.getElementById("cart-placeholder").innerHTML   = window.cartHTML;
+initNav("about.html");
+initAOS();
+initCart();
+</script>
+</body>
+</html>

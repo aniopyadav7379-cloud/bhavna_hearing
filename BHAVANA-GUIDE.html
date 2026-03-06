@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Bhavana Website — Complete Setup & Management Guide</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+  .cover{background:linear-gradient(135deg,#e8622a,#00766c);color:#fff;padding:3.5rem 2rem;text-align:center}
+  .cover h1{font-size:2.2rem;font-weight:800;margin-bottom:.4rem}
+  .cover p{opacity:.8;font-size:1.05rem}
+  .cover .badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:50px;padding:.3rem 1rem;font-size:.82rem;margin-top:.8rem}
+  .wrap{max-width:860px;margin:0 auto;padding:2rem 1.2rem}
+  .toc{background:#fff;border-radius:12px;padding:1.8rem;margin:2rem 0;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+  .toc h2{font-size:1.1rem;color:#e8622a;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+  .toc ol{padding-left:1.4rem}
+  .toc li{padding:.3rem 0;font-size:.92rem}
+  .toc a{color:#00766c;text-decoration:none;font-weight:500}
+  .toc a:hover{text-decoration:underline}
+  .sec{background:#fff;border-radius:12px;padding:2rem;margin-bottom:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+  .sec-hd{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:2px solid #f0f0f0}
+  .sec-ico{font-size:1.6rem;flex-shrink:0}
+  .sec-hd h2{font-size:1.3rem;color:#222}
+  .sec-hd p{font-size:.83rem;color:#666;margin:0}
+  .step{display:flex;gap:.9rem;margin-bottom:1.2rem;align-items:flex-start}
+  .step-num{min-width:32px;height:32px;border-radius:50%;background:#e8622a;color:#fff;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+  .step-body strong{display:block;font-size:.95rem;margin-bottom:.2rem}
+  .step-body p,.step-body div{font-size:.86rem;color:#555;line-height:1.65}
+  .note{background:#fff9c4;border:1px solid #f6d860;border-radius:8px;padding:.85rem 1rem;font-size:.84rem;margin:.8rem 0;line-height:1.6}
+  .tip{background:#e8f5e9;border:1px solid #a5d6a7;border-radius:8px;padding:.85rem 1rem;font-size:.84rem;margin:.8rem 0;line-height:1.6}
+  .warn{background:#fce4ec;border:1px solid #f48fb1;border-radius:8px;padding:.85rem 1rem;font-size:.84rem;margin:.8rem 0;line-height:1.6}
+  code{background:#f0f0f0;padding:.08rem .42rem;border-radius:4px;font-family:monospace;font-size:.83rem;color:#c0392b}
+  pre{background:#1e1e2e;color:#cdd6f4;padding:1.1rem 1.3rem;border-radius:8px;font-size:.82rem;overflow-x:auto;margin:.8rem 0;line-height:1.7}
+  pre .c{color:#6c7086}
+  pre .k{color:#cba6f7}
+  pre .s{color:#a6e3a1}
+  .file-tree{background:#1e1e2e;color:#cdd6f4;padding:1.2rem 1.5rem;border-radius:8px;font-family:monospace;font-size:.83rem;line-height:2;margin:.8rem 0}
+  .file-tree .dir{color:#89b4fa}
+  .file-tree .file{color:#a6e3a1}
+  .file-tree .note-f{color:#6c7086;font-size:.76rem}
+  .sheet-table{width:100%;border-collapse:collapse;font-size:.82rem;margin:.8rem 0}
+  .sheet-table th{background:#e8622a;color:#fff;padding:.5rem .75rem;text-align:left}
+  .sheet-table td{padding:.48rem .75rem;border-bottom:1px solid #eee}
+  .sheet-table tr:nth-child(even) td{background:#fafafa}
+  .sheet-table2 th{background:#00766c}
+  .tag-list{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem}
+  .tag{display:inline-block;background:#f0f0f0;border-radius:50px;padding:.22rem .75rem;font-size:.78rem;font-weight:500;color:#444}
+  .tag.or{background:#fff3ed;color:#e8622a}
+  .tag.tl{background:#e8f5f3;color:#00766c}
+  h3{font-size:1rem;color:#222;margin:1.2rem 0 .5rem}
+  .img-names{background:#f8f8f8;border:1px solid #e0e0e0;border-radius:8px;padding:1rem 1.2rem;font-family:monospace;font-size:.82rem;line-height:2;margin:.6rem 0}
+  .img-names span{color:#888;margin-left:.6rem;font-size:.75rem}
+  .url-box{background:#1e1e2e;color:#a6e3a1;padding:.9rem 1.2rem;border-radius:8px;font-family:monospace;font-size:.86rem;word-break:break-all;margin:.6rem 0}
+  .divider{height:2px;background:linear-gradient(to right,#e8622a20,#e8622a,#e8622a20);margin:2rem 0;border:none}
+  footer{text-align:center;padding:2rem;color:#888;font-size:.83rem}
+  @media(max-width:600px){.cover h1{font-size:1.6rem}.step{flex-direction:column;gap:.4rem}}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div style="font-size:2.5rem;margin-bottom:.5rem">🩺</div>
+  <h1>Bhavana Hearing &amp; Vertigo Clinic</h1>
+  <p>Complete Website Setup &amp; Management Guide</p>
+  <div class="badge">📅 Last Updated: March 2025 · Version 3.0</div>
+</div>
+
+<div class="wrap">
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <h2>📋 What's Inside This Guide</h2>
+  <ol>
+    <li><a href="#files">All Your Website Files — What Each One Does</a></li>
+    <li><a href="#upload">How to Upload the Website</a></li>
+    <li><a href="#sheets">Connecting Google Sheets (App Script Setup)</a></li>
+    <li><a href="#enquiry">How Customer Enquiries Reach You</a></li>
+    <li><a href="#appointment">How Appointment Bookings Reach You</a></li>
+    <li><a href="#photos">How to Add Team Photos</a></li>
+    <li><a href="#pages">Website Pages — What Each Page Has</a></li>
+    <li><a href="#update">How to Update Content (Products, Services, etc.)</a></li>
+    <li><a href="#whatsapp">WhatsApp &amp; Phone Numbers</a></li>
+    <li><a href="#troubleshoot">Troubleshooting Common Problems</a></li>
+  </ol>
+</div>
+
+<!-- SECTION 1: FILES -->
+<div class="sec" id="files">
+  <div class="sec-hd">
+    <div class="sec-ico">📁</div>
+    <div><h2>All Your Website Files</h2><p>You will receive these files — here is what each one does</p></div>
+  </div>
+
+  <div class="file-tree">
+    <span class="dir">📁 your-website/</span><br>
+    &nbsp;&nbsp;<span class="file">├── index.html</span> <span class="note-f">← HOME page (main landing page)</span><br>
+    &nbsp;&nbsp;<span class="file">├── services.html</span> <span class="note-f">← Services + All Tests & Diagnostics</span><br>
+    &nbsp;&nbsp;<span class="file">├── shop.html</span> <span class="note-f">← Hearing Aid products (Enquire)</span><br>
+    &nbsp;&nbsp;<span class="file">├── about.html</span> <span class="note-f">← About clinic + Meet the Team</span><br>
+    &nbsp;&nbsp;<span class="file">├── branches.html</span> <span class="note-f">← All 4 branches with maps</span><br>
+    &nbsp;&nbsp;<span class="file">├── appointment.html</span> <span class="note-f">← Appointment booking form</span><br>
+    &nbsp;&nbsp;<span class="file">├── blog.html</span> <span class="note-f">← Health articles &amp; tips</span><br>
+    &nbsp;&nbsp;<span class="file">├── shared.js</span> <span class="note-f">← ⭐ Main data file (products, team, nav, footer)</span><br>
+    &nbsp;&nbsp;<span class="file">├── shared.css</span> <span class="note-f">← All styles and design</span><br>
+    &nbsp;&nbsp;<span class="file">├── Code.gs</span> <span class="note-f">← Google Apps Script (paste into Google Sheet)</span><br>
+    &nbsp;&nbsp;<span class="dir">└── 📁 assets/</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="dir">└── 📁 team/</span> <span class="note-f">← Put team photos here (you create this folder)</span>
+  </div>
+
+  <div class="note">⭐ <strong>Most important:</strong> <code>shared.js</code> contains ALL your clinic data — products, team, services, branches, testimonials. If you want to update prices or add a new product, you edit <code>shared.js</code>.</div>
+</div>
+
+<!-- SECTION 2: UPLOAD -->
+<div class="sec" id="upload">
+  <div class="sec-hd">
+    <div class="sec-ico">☁️</div>
+    <div><h2>How to Upload the Website</h2><p>Steps to put your website online</p></div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <strong>Download all files from the ZIP/folder I sent you</strong>
+      <p>You should have: index.html, services.html, shop.html, about.html, branches.html, appointment.html, blog.html, shared.js, shared.css, Code.gs</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <strong>Upload all .html, shared.js, and shared.css files to your hosting</strong>
+      <p>All files must be in the SAME folder (root directory). Upload using your hosting's File Manager or FTP (FileZilla). Do NOT put them inside sub-folders.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <strong>Create the team photos folder</strong>
+      <p>In your hosting file manager, create folder: <code>assets/team/</code> — this is where you upload team photos later.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <strong>Open your website in the browser and test</strong>
+      <p>Press <strong>Ctrl + Shift + R</strong> (Windows) or <strong>Cmd + Shift + R</strong> (Mac) to clear cache. Check all navigation links work.</p>
+    </div>
+  </div>
+
+  <div class="tip">✅ <strong>After uploading:</strong> Set <code>index.html</code> as your homepage in your domain settings (most hosting does this automatically).</div>
+</div>
+
+<!-- SECTION 3: SHEETS -->
+<div class="sec" id="sheets">
+  <div class="sec-hd">
+    <div class="sec-ico">📊</div>
+    <div><h2>Connecting Google Sheets (App Script Setup)</h2><p>This is how customer enquiries and appointments arrive in your Google Sheet</p></div>
+  </div>
+
+  <div class="note">⚠️ <strong>You need to do this once.</strong> After setup, all enquiries and bookings go automatically to your Google Sheet.</div>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <strong>Open your Google Sheet</strong>
+      <p>Go to <a href="https://sheets.google.com" target="_blank">sheets.google.com</a> → open your Bhavana sheet (or create a new one named "Bhavana Clinic").</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <strong>Open Apps Script</strong>
+      <p>Click <strong>Extensions</strong> in the menu → click <strong>Apps Script</strong>. A new tab opens.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <strong>Paste the Code.gs file</strong>
+      <p>In Apps Script, delete everything that's already there. Open your <code>Code.gs</code> file → copy everything → paste it into Apps Script.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <strong>Save the script</strong>
+      <p>Press <strong>Ctrl + S</strong> (or click the 💾 save icon). Name the project "Bhavana Website".</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <strong>Deploy as a Web App</strong>
+      <p>Click <strong>Deploy</strong> (blue button, top right) → <strong>New deployment</strong>.<br>
+      Set: <strong>Type = Web App</strong><br>
+      Set: <strong>Execute as = Me</strong><br>
+      Set: <strong>Who has access = Anyone</strong><br>
+      Click <strong>Deploy</strong>.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">6</div>
+    <div class="step-body">
+      <strong>Copy the Web App URL</strong>
+      <p>After deploying, you will see a URL like:<br>
+      <code>https://script.google.com/macros/s/ABC123.../exec</code><br>
+      Copy this URL — you need it in the next step.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">7</div>
+    <div class="step-body">
+      <strong>Paste the URL into shared.js</strong>
+      <p>Open <code>shared.js</code> in Notepad (or any text editor). Find this line near the top:</p>
+      <pre>var SHEET_URL = "https://script.google.com/macros/s/<span class="s">YOUR_URL_HERE</span>/exec";</pre>
+      <p>Replace <code>YOUR_URL_HERE</code> with your actual URL. Save the file. Re-upload <code>shared.js</code> to your website.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">8</div>
+    <div class="step-body">
+      <strong>Test it works</strong>
+      <p>Open the Web App URL in your browser. You should see:<br>
+      <code>{"status":"ok","message":"Bhavana Sheet API running ✅"}</code><br>
+      If you see this, it is working!</p>
+    </div>
+  </div>
+
+  <div class="tip">✅ <strong>Tip:</strong> If you update Code.gs later, you must deploy a <strong>New deployment</strong> again (not Manage existing). The old URL still works — use the new URL if you want to update.</div>
+</div>
+
+<!-- SECTION 4: ENQUIRY -->
+<div class="sec" id="enquiry">
+  <div class="sec-hd">
+    <div class="sec-ico">💬</div>
+    <div><h2>How Customer Enquiries Reach You</h2><p>What happens when a customer clicks "Enquire" on a hearing aid</p></div>
+  </div>
+
+  <h3>Step-by-step flow for the customer:</h3>
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body"><strong>Customer sees a product</strong><p>On the Home page or Shop page, customer sees a hearing aid they like.</p></div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body"><strong>Customer clicks "Enquire"</strong><p>A form popup opens immediately.</p></div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body"><strong>Customer fills the form</strong><p>They enter: Name, Phone, Email (optional), their nearest Branch, and any questions/notes.</p></div>
+  </div>
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-body"><strong>Customer clicks "Submit Enquiry"</strong><p>The form is sent to your Google Sheet automatically. Customer sees a success message.</p></div>
+  </div>
+  <div class="step">
+    <div class="step-num">5</div>
+    <div class="step-body"><strong>You see it in Google Sheet</strong><p>Open your Google Sheet → go to the <strong>"Hearing Aid Enquiries"</strong> tab → new row is highlighted in green.</p></div>
+  </div>
+
+  <h3>What you receive in Google Sheet — "Hearing Aid Enquiries" tab:</h3>
+  <table class="sheet-table sheet-table2">
+    <tr><th>Column</th><th>What it Shows</th><th>Example</th></tr>
+    <tr><td>Timestamp</td><td>Date &amp; time of enquiry</td><td>06/03/2025, 2:45 PM</td></tr>
+    <tr><td>Customer Name</td><td>Customer's full name</td><td>Ramesh Kumar</td></tr>
+    <tr><td>Phone</td><td>Their mobile number</td><td>+91 98765 43210</td></tr>
+    <tr><td>Email</td><td>Email (may be blank)</td><td>ramesh@gmail.com</td></tr>
+    <tr><td>Branch</td><td>Their nearest Bhavana branch</td><td>Trimulgherry, Secunderabad</td></tr>
+    <tr><td>Products Enquired</td><td>Product name, brand, price</td><td>Signia Pure 312 (Signia) ₹35,000</td></tr>
+    <tr><td>Notes</td><td>Customer's question</td><td>Does this work for severe loss?</td></tr>
+    <tr><td>Status</td><td>Follow-up status (you update this)</td><td>🆕 New → ✅ Called</td></tr>
+  </table>
+</div>
+
+<!-- SECTION 5: APPOINTMENT -->
+<div class="sec" id="appointment">
+  <div class="sec-hd">
+    <div class="sec-ico">📅</div>
+    <div><h2>How Appointment Bookings Reach You</h2><p>What happens when a patient books an appointment</p></div>
+  </div>
+
+  <p style="font-size:.88rem;color:#555;margin-bottom:1rem">Same process as enquiries — goes to a separate tab called <strong>"Appointments"</strong>.</p>
+
+  <h3>What you receive in Google Sheet — "Appointments" tab:</h3>
+  <table class="sheet-table">
+    <tr><th>Column</th><th>What it Shows</th><th>Example</th></tr>
+    <tr><td>Timestamp</td><td>When they booked</td><td>06/03/2025, 11:20 AM</td></tr>
+    <tr><td>Name</td><td>Patient's name</td><td>Priya Sharma</td></tr>
+    <tr><td>Phone</td><td>Mobile number</td><td>+91 91234 56789</td></tr>
+    <tr><td>Email</td><td>Email address</td><td>priya@gmail.com</td></tr>
+    <tr><td>Age</td><td>Patient's age</td><td>58</td></tr>
+    <tr><td>Service</td><td>Which service they want</td><td>Hearing Assessment</td></tr>
+    <tr><td>Branch</td><td>Preferred branch</td><td>Kukatpally (KPHB)</td></tr>
+    <tr><td>Preferred Date</td><td>When they want to come</td><td>15 March 2025</td></tr>
+    <tr><td>Visit Type</td><td>Clinic or Home Visit</td><td>Home Visit</td></tr>
+    <tr><td>Notes</td><td>Any special notes</td><td>Elderly patient, needs ground floor</td></tr>
+    <tr><td>Status</td><td>Your follow-up status</td><td>🆕 New → ✅ Confirmed</td></tr>
+  </table>
+
+  <div class="tip">✅ <strong>Tip:</strong> Change the Status column yourself — from 🆕 New to ✅ Confirmed after you call the patient, or 🔄 Follow-up if you need to call again.</div>
+</div>
+
+<!-- SECTION 6: PHOTOS -->
+<div class="sec" id="photos">
+  <div class="sec-hd">
+    <div class="sec-ico">📸</div>
+    <div><h2>How to Add Team Photos</h2><p>Show real photos of your team on the About Us page</p></div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <strong>Prepare your photos</strong>
+      <p>Take or collect photos of each team member. Best size: <strong>square, minimum 400×400 pixels</strong>. JPG format is best.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <strong>Rename each photo EXACTLY as shown below</strong>
+      <p>The file names must match exactly — use only lowercase letters and hyphens:</p>
+      <div class="img-names">
+        venkatram-reddy.jpg<span>← Shri Venkatram Reddy (Founder)</span><br>
+        priya-nair.jpg<span>← Dr. Priya Nair</span><br>
+        ravi-shankar.jpg<span>← Dr. Ravi Shankar</span><br>
+        anitha-reddy.jpg<span>← Ms. Anitha Reddy</span><br>
+        suresh-kumar.jpg<span>← Mr. Suresh Kumar</span><br>
+        deepa-sharma.jpg<span>← Ms. Deepa Sharma</span><br>
+        amala-fernandez.jpg<span>← Dr. Amala Fernandez</span>
+      </div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <strong>Upload to your website in the correct folder</strong>
+      <p>In your hosting file manager, go to the folder where your website files are. Upload the photos to: <code>assets/team/</code><br>
+      (Create this folder if it doesn't exist.)</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-body" style="background:#e8f5e9;border-radius:8px;padding:.75rem 1rem">
+      <strong>✅ Done! Photos appear automatically</strong>
+      <p>Open the About Us page and refresh. If a photo file is missing, coloured initials show instead — nothing breaks.</p>
+    </div>
+  </div>
+
+  <div class="note">📱 <strong>For videos:</strong> Upload team videos to YouTube and send the YouTube link — we can add it to the About page easily.</div>
+</div>
+
+<!-- SECTION 7: PAGES -->
+<div class="sec" id="pages">
+  <div class="sec-hd">
+    <div class="sec-ico">🗂️</div>
+    <div><h2>Website Pages — What Each Page Has</h2><p>Overview of your 7 website pages</p></div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-top:.5rem">
+    <div style="background:#f9f9f9;border:1px solid #eee;border-radius:10px;padding:1.1rem">
+      <strong style="color:#e8622a">🏠 Home (index.html)</strong>
+      <p style="font-size:.82rem;color:#555;margin-top:.3rem">Hero banner, 6 featured hearing aids, services overview, home visit process, 3 blog posts, appointment form, contact details</p>
+    </div>
+    <div style="background:#f9f9f9;border:1px solid #eee;border-radius:10px;padding:1.1rem">
+      <strong style="color:#e8622a">🩺 Services (services.html)</strong>
+      <p style="font-size:.82rem;color:#555;margin-top:.3rem">All 16 services (Hearing, Vertigo, Speech), ALL 22 diagnostic tests, pricing, visit process</p>
+    </div>
+    <div style="background:#f9f9f9;border:1px solid #eee;border-radius:10px;padding:1.1rem">
+      <strong style="color:#e8622a">🎧 Hearing Aids (shop.html)</strong>
+      <p style="font-size:.82rem;color:#555;margin-top:.3rem">All 19 hearing aid products with brand, price, EMI, category filter, "Enquire" button</p>
+    </div>
+    <div style="background:#f9f9f9;border:1px solid #eee;border-radius:10px;padding:1.1rem">
+      <strong style="color:#e8622a">👥 About Us (about.html)</strong>
+      <p style="font-size:.82rem;color:#555;margin-top:.3rem">Clinic story, 14-year timeline, founder profile, all 7 team members, patient testimonials, CTA</p>
+    </div>
+    <div style="background:#f9f9f9;border:1px solid #eee;border-radius:10px;padding:1.1rem">
+      <strong style="color:#e8622a">📍 Branches (branches.html)</strong>
+      <p style="font-size:.82rem;color:#555;margin-top:.3rem">All 4 branches (Trimulgherry, RTC X Road, Kukatpally, Mumbai) with address, phone, hours, map link</p>
+    </div>
+    <div style="background:#f9f9f9;border:1px solid #eee;border-radius:10px;padding:1.1rem">
+      <strong style="color:#e8622a">📅 Appointment (appointment.html)</strong>
+      <p style="font-size:.82rem;color:#555;margin-top:.3rem">Full booking form with service type, branch selection, home visit option, sends to Google Sheet</p>
+    </div>
+    <div style="background:#f9f9f9;border:1px solid #eee;border-radius:10px;padding:1.1rem">
+      <strong style="color:#e8622a">📝 Blog (blog.html)</strong>
+      <p style="font-size:.82rem;color:#555;margin-top:.3rem">Health articles about hearing loss, vertigo, tinnitus, child hearing, hearing aids</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 8: UPDATE CONTENT -->
+<div class="sec" id="update">
+  <div class="sec-hd">
+    <div class="sec-ico">✏️</div>
+    <div><h2>How to Update Content</h2><p>All your data is in shared.js — easy to find and change</p></div>
+  </div>
+
+  <div class="note">📌 Open <code>shared.js</code> in any text editor (Notepad, VS Code). Use <strong>Ctrl + F</strong> to search for what you want to change.</div>
+
+  <h3>To change a product price:</h3>
+  <p style="font-size:.86rem;color:#555">Search for the product name → find <code>p:</code> → change the number.</p>
+  <pre>{ id:3, name:"Signia Pure 312 3X", brand:"Signia", p:<span class="s">35000</span>, emi:"EMI: ₹2,917/month" ... }</pre>
+
+  <h3>To add a new product:</h3>
+  <p style="font-size:.86rem;color:#555">Find <code>BHAVANA.products</code> → add a new line at the end of the array following the same pattern.</p>
+
+  <h3>To change phone number:</h3>
+  <p style="font-size:.86rem;color:#555">Search for <code>08197428456</code> in shared.js — replace all occurrences.</p>
+
+  <h3>To change WhatsApp number:</h3>
+  <p style="font-size:.86rem;color:#555">Search for <code>918197428456</code> in shared.js — replace all occurrences.</p>
+
+  <h3>To update the Google Sheet URL:</h3>
+  <p style="font-size:.86rem;color:#555">Search for <code>SHEET_URL</code> at the top of shared.js → update the URL.</p>
+  <pre>var SHEET_URL = <span class="s">"https://script.google.com/macros/s/YOUR_URL/exec"</span>;</pre>
+
+  <div class="tip">✅ After editing shared.js, save the file and re-upload it to your website. Press Ctrl+Shift+R in the browser to clear the cache and see the changes.</div>
+</div>
+
+<!-- SECTION 9: WHATSAPP -->
+<div class="sec" id="whatsapp">
+  <div class="sec-hd">
+    <div class="sec-ico">📱</div>
+    <div><h2>WhatsApp &amp; Phone Numbers</h2><p>Where your contact details appear on the website</p></div>
+  </div>
+
+  <p style="font-size:.86rem;color:#555;margin-bottom:1rem">Your current numbers in the website:</p>
+  <table class="sheet-table">
+    <tr><th>What</th><th>Current Number</th><th>Where to Change</th></tr>
+    <tr><td>Phone (display)</td><td>081974 28456</td><td>Search <code>08197428456</code> in shared.js</td></tr>
+    <tr><td>WhatsApp link</td><td>+91 8197428456</td><td>Search <code>918197428456</code> in shared.js</td></tr>
+    <tr><td>Email</td><td>bhavanahearing@gmail.com</td><td>Search <code>bhavanahearing@gmail.com</code> in shared.js</td></tr>
+  </table>
+
+  <div class="tip">💬 The floating WhatsApp button (bottom-right of every page) also uses the same number. Changing <code>918197428456</code> in shared.js updates everything.</div>
+</div>
+
+<!-- SECTION 10: TROUBLESHOOT -->
+<div class="sec" id="troubleshoot">
+  <div class="sec-hd">
+    <div class="sec-ico">🔧</div>
+    <div><h2>Troubleshooting Common Problems</h2><p>What to do if something doesn't work</p></div>
+  </div>
+
+  <h3>❓ Enquiry form is not sending to Google Sheet</h3>
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body"><p>Open <code>shared.js</code> → find <code>SHEET_URL</code> → check it has the correct URL (from Step 6 of the Google Sheet setup).</p></div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body"><p>Open the URL in your browser — it should show <code>{"status":"ok"...}</code>. If you get an error, re-deploy the Apps Script.</p></div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body"><p>In Apps Script: Deploy → Manage deployments → check it still says "Active".</p></div>
+  </div>
+
+  <hr style="border:none;border-top:1px solid #eee;margin:1.2rem 0"/>
+
+  <h3>❓ Website looks broken / styles missing</h3>
+  <p style="font-size:.86rem;color:#555;margin-bottom:.6rem">Make sure <code>shared.css</code> and <code>shared.js</code> are in the SAME folder as all .html files.</p>
+
+  <h3>❓ Team photos not showing</h3>
+  <p style="font-size:.86rem;color:#555;margin-bottom:.6rem">Check: (1) Folder is <code>assets/team/</code> (2) File name matches exactly (lowercase, hyphens) (3) File is JPG format.</p>
+
+  <h3>❓ Nav links go to wrong page</h3>
+  <p style="font-size:.86rem;color:#555;margin-bottom:.6rem">All pages use <code>shared.js</code> for the nav. Make sure the latest <code>shared.js</code> is uploaded.</p>
+
+  <h3>❓ Need to add a new page</h3>
+  <p style="font-size:.86rem;color:#555">Send me the content and I will create the page for you — it takes about 30 minutes to add a new page to the website.</p>
+
+  <div class="warn">📞 <strong>Need help?</strong> If you are stuck on any step, take a screenshot and send it to me on WhatsApp. I will fix it for you quickly.</div>
+</div>
+
+<hr class="divider"/>
+<footer>
+  <p>🩺 <strong>Bhavana Hearing &amp; Vertigo Clinic</strong> — Website Management Guide</p>
+  <p style="margin-top:.3rem">Trimulgherry, Secunderabad, Hyderabad &nbsp;·&nbsp; 📞 081974 28456 &nbsp;·&nbsp; bhavanahearing@gmail.com</p>
+  <p style="margin-top:.5rem;font-size:.78rem;color:#aaa">This guide was created to help you manage your website independently. Keep it saved on your computer.</p>
+</footer>
+
+</div>
+</body>
+</html>

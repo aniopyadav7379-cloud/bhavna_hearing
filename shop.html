@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Hearing Aids &amp; Accessories | Bhavana Clinic Hyderabad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+<style>
+/* ── FILTER BUTTONS ── */
+.sfilters{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-bottom:2.5rem}
+.sfbtn{padding:.46rem 1.18rem;border-radius:50px;border:1.5px solid var(--bd);background:#fff;cursor:pointer;font-family:var(--fb);font-size:.84rem;font-weight:600;color:var(--text-lt);transition:all var(--tr)}
+.sfbtn.act,.sfbtn:hover{background:var(--or);color:#fff;border-color:var(--or)}
+
+/* ── PRODUCT GRID ── */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.4rem}
+.pcard{background:#fff;border:1px solid var(--bd-lt);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--tr),box-shadow var(--tr)}
+.pcard:hover{transform:translateY(-5px);box-shadow:var(--sh)}
+
+/* ── PRODUCT PHOTO BOX ── */
+/* If you add a real photo, it shows. If no photo, the emoji shows instead */
+.pimg{height:180px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fef3ee,#fff3e8);overflow:hidden;position:relative}
+.pimg img{width:100%;height:100%;object-fit:contain;padding:12px}
+.pimg-emoji{font-size:3.4rem}
+
+/* ── PRODUCT BODY ── */
+.pbrand{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.3px;color:var(--or);margin-bottom:.28rem}
+.pbadge{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;padding:.15rem .52rem;border-radius:50px;margin-bottom:.35rem}
+.cat-bte{background:#fdebd0;color:#a84300}
+.cat-ric{background:#d6eaf8;color:#1a5276}
+.cat-ite{background:#d5f5e3;color:#1a6340}
+.cat-acc{background:#f9ebea;color:#78281f}
+.cat-bat{background:#eaf2ff;color:#154360}
+.pbody{padding:1.15rem;flex:1;display:flex;flex-direction:column}
+.pbody h4{font-size:.93rem;font-weight:700;margin-bottom:.22rem;line-height:1.3}
+.pbody>p{font-size:.81rem;color:var(--text-lt);flex:1;margin-bottom:.7rem}
+.pfeats{display:flex;flex-wrap:wrap;gap:.25rem;margin-bottom:.8rem}
+.pfeat{font-size:.68rem;background:var(--bg-alt);padding:.14rem .5rem;border-radius:4px;color:var(--text-lt)}
+.pfooter{display:flex;align-items:flex-end;justify-content:space-between;gap:.5rem;flex-wrap:wrap;margin-top:auto}
+.pprice{font-weight:700;font-size:1.04rem;color:var(--teal)}
+.pprice del{font-size:.74rem;color:var(--text-lt);font-weight:400;margin-right:2px}
+.pemi{display:block;font-size:.67rem;color:var(--text-lt);font-weight:400;margin-top:.08rem}
+.pbtn{background:var(--or);color:#fff;border:none;padding:.42rem .88rem;border-radius:50px;cursor:pointer;font-family:var(--fb);font-size:.77rem;font-weight:600;transition:background var(--tr),transform var(--tr);white-space:nowrap}
+.pbtn:hover{background:var(--or-dk);transform:scale(1.05)}
+
+/* ── SHOP NOTE ── */
+.shop-note{display:flex;align-items:flex-start;gap:1.2rem;background:var(--bg-alt);border:1px solid var(--bd);border-radius:var(--r);padding:1.4rem 1.8rem;margin-top:2.5rem;flex-wrap:wrap}
+.sn-ico{font-size:2rem;flex-shrink:0;padding-top:.12rem}
+.shop-note>div{flex:1;min-width:180px}
+.shop-note strong{display:block;font-size:.96rem;font-weight:700;margin-bottom:.22rem}
+.shop-note p{font-size:.85rem;color:var(--text-lt);margin:0}
+
+/* ── BRAND GRID ── */
+.brand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1rem;margin-top:3rem}
+.brand-card{background:#fff;border:1px solid var(--bd-lt);border-radius:var(--rs);padding:1.2rem;text-align:center;font-size:.85rem;font-weight:600;color:var(--text-lt);transition:border-color var(--tr),color var(--tr)}
+.brand-card:hover{border-color:var(--or);color:var(--or)}
+.brand-card .brand-ico{font-size:1.8rem;margin-bottom:.4rem}
+
+/* ── HIDE FILTERED CARDS ── */
+.pcard.hidden{display:none}
+</style>
+</head>
+<body>
+
+<div id="preloader">
+  <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#e8622a" stroke-width="2" class="pl-ring"/><path d="M32 12C20.95 12 12 20.95 12 32c0 6.04 2.7 11.46 6.97 15.17l3.1-3.52A10.98 10.98 0 0118 32c0-7.73 6.27-14 14-14s14 6.27 14 14c0 4.32-1.96 8.17-5.05 10.75l3.1 3.52C48.3 43.46 51 38.04 51 32c0-11.05-8.95-20-19-20z" fill="#e8622a"/><circle cx="32" cy="32" r="4.5" fill="#e8622a"/></svg>
+  <strong>Bhavana</strong><span>Hearing &amp; Vertigo Clinic</span>
+</div>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="tag">Shop</span>
+    <h1>Hearing Aids &amp;<br><em>Accessories</em></h1>
+    <p>All leading international brands. Expert fitting included. EMI from ₹999/month. Free 6-month follow-up with every purchase.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Hearing Aids &amp; Accessories</span></div>
+  </div>
+</div>
+
+<div class="tbar"><div class="tbar-inner wrap">
+  <div class="ti">✅ Free Hearing Test with Purchase</div><div class="tsep"></div>
+  <div class="ti">🎓 Real-Ear Verified Fitting</div><div class="tsep"></div>
+  <div class="ti">💳 EMI from ₹999/month</div><div class="tsep"></div>
+  <div class="ti">🔧 1-Year Warranty Service</div><div class="tsep"></div>
+  <div class="ti">🎁 Free Custom Ear Mould</div>
+</div></div>
+
+
+<!-- ==========================================================
+  PRODUCTS SECTION
+  ✏️ HOW TO EDIT A PRODUCT:
+     Find the product below and change text directly
+
+  📸 HOW TO ADD A PRODUCT PHOTO:
+     1. Save your photo in  assets/products/  folder
+     2. Find the product below
+     3. Replace the emoji line with:
+        <img src="assets/products/YOUR-PHOTO.jpg" alt="Product Name"/>
+     Example: instead of  <span class="pimg-emoji">🔊</span>
+              write       <img src="assets/products/phonak-naida.jpg" alt="Phonak Naida"/>
+
+  ✏️ HOW TO CHANGE PRICE:
+     Find  ₹72,000  and change the number
+
+  ➕ HOW TO ADD A NEW PRODUCT:
+     Copy one full product block (from <!-- PRODUCT --> <!--to its </div></div>)
+     Paste it after the last product in the same category
+     Change data-cat to: bte / ric / ite / acc / bat
+=========================================================== -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-hd"><span class="tag">Products Available</span><h2>Browse Our Complete <em>Range</em></h2></div>
+
+    <!-- FILTER BUTTONS — do not change these -->
+    <div class="sfilters">
+      <button class="sfbtn act" data-cat="all">All Products</button>
+      <button class="sfbtn" data-cat="bte">BTE Hearing Aids</button>
+      <button class="sfbtn" data-cat="ric">RIC / RITE</button>
+      <button class="sfbtn" data-cat="ite">ITE / CIC / IIC</button>
+      <button class="sfbtn" data-cat="acc">Accessories</button>
+      <button class="sfbtn" data-cat="bat">Batteries</button>
+    </div>
+
+    <div class="pgrid" id="pgrid">
+
+
+      <!-- ============================================================
+           BTE HEARING AIDS  (Behind-The-Ear)
+           data-cat="bte"  ← do not change this
+      ============================================================ -->
+
+      <!-- PRODUCT 1 — Phonak Naída Paradise P90 -->
+      <div class="pcard" data-cat="bte">
+        <div class="pimg">
+<img src="D:\bhavna image\Phonak Naída Paradise P90.webp" alt="Phonak Naida P90"/>
+          <!-- 📸 TO ADD PHOTO: replace the line below with:
+                
+          <span class="pimg-emoji">🔊</span>-->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Phonak</div><!-- ✏️ Brand name -->
+          <span class="pbadge cat-bte">BTE Aid</span>
+          <h4>Phonak Naída Paradise P90</h4><!-- ✏️ Product name -->
+          <p>Super-power BTE. IP68 waterproof, rechargeable, Bluetooth. For severe-profound loss.</p><!-- ✏️ Description -->
+          <div class="pfeats">
+            <!-- ✏️ Add or remove feature tags -->
+            <span class="pfeat">Rechargeable Li-ion</span>
+            <span class="pfeat">Bluetooth Streaming</span>
+            <span class="pfeat">IP68 Waterproof</span>
+            <span class="pfeat">AutoSense OS 4.0</span>
+          </div>
+          <div class="pfooter">
+            <div class="pprice">
+              <del>₹85,000</del> ₹72,000<!-- ✏️ Strike-through price then actual price -->
+              <span class="pemi">EMI: ₹2,400/mo</span><!-- ✏️ EMI amount -->
+            </div>
+            <button class="pbtn" onclick="openEnquiry('Phonak Naída Paradise P90','Phonak','₹72,000','₹2,400/mo')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 2 — Signia Motion Charge&Go X -->
+      <div class="pcard" data-cat="bte">
+        <div class="pimg"><img src="D:\bhavna image\Signia Motion Charge&Go X.webp" alt="Signia Motion"/>
+          <!-- 📸 TO ADD PHOTO:  
+          <span class="pimg-emoji">🔊</span>-->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Signia</div>
+          <span class="pbadge cat-bte">BTE Aid</span>
+          <h4>Signia Motion Charge&amp;Go X</h4>
+          <p>Rechargeable BTE with Own Voice Processing &amp; direct Bluetooth streaming.</p>
+          <div class="pfeats">
+            <span class="pfeat">Own Voice Processing</span>
+            <span class="pfeat">Direct Streaming</span>
+            <span class="pfeat">Rechargeable</span>
+            <span class="pfeat">Tinnitus Therapy</span>
+          </div>
+          <div class="pfooter">
+            <div class="pprice">
+              <del>₹58,000</del> ₹48,000
+              <span class="pemi">EMI: ₹1,600/mo</span>
+            </div>
+            <button class="pbtn" onclick="openEnquiry('Signia Motion Charge&Go X','Signia','₹48,000','₹1,600/mo')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 3 — Unitron Moxi Move R BTE -->
+      <div class="pcard" data-cat="bte">
+        <div class="pimg"><img src="D:\bhavna image\unitron-dx-moxi-move-r-7-ric-bte-rechargeable-hearing-aid-16-channels-500x500.webp" alt="Unitron Moxi"/>
+          <!-- 📸 TO ADD PHOTO:  
+          <span class="pimg-emoji">🔊</span>-->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Unitron</div>
+          <span class="pbadge cat-bte">BTE Aid</span>
+          <h4>Unitron Moxi Move R BTE</h4>
+          <p>Rechargeable BTE with SoundNav automatic environment classification.</p>
+          <div class="pfeats">
+            <span class="pfeat">Rechargeable</span>
+            <span class="pfeat">SoundNav Auto</span>
+            <span class="pfeat">Bluetooth</span>
+            <span class="pfeat">Moderate Loss</span>
+          </div>
+          <div class="pfooter">
+            <div class="pprice">
+              <del>₹42,000</del> ₹35,000
+              <span class="pemi">EMI: ₹1,167/mo</span>
+            </div>
+            <button class="pbtn" onclick="openEnquiry('Unitron Moxi Move R BTE','Unitron','₹35,000','₹1,167/mo')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ============================================================
+           RIC / RITE HEARING AIDS  (Receiver-In-Canal)
+           data-cat="ric"  ← do not change this
+      ============================================================ -->
+
+      <!-- PRODUCT 4 — Phonak Audéo Paradise P90 -->
+      <div class="pcard" data-cat="ric">
+        <div class="pimg"><img src="D:\bhavna image\Phonak Audéo Paradise P90.webp" alt="Phonak Audeo"/>
+          <!-- 📸 TO ADD PHOTO:  
+          <span class="pimg-emoji">👂</span>-->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Phonak</div>
+          <span class="pbadge cat-ric">RIC/RITE</span>
+          <h4>Phonak Audéo Paradise P90</h4>
+          <p>Premium RIC with Speech Enhancer, AutoSense OS 4.0 and Bluetooth.</p>
+          <div class="pfeats">
+            <span class="pfeat">Speech Enhancer</span>
+            <span class="pfeat">AutoSense OS 4.0</span>
+            <span class="pfeat">Motion Sensor</span>
+            <span class="pfeat">Bluetooth</span>
+          </div>
+          <div class="pfooter">
+            <div class="pprice">
+              <del>₹99,000</del> ₹85,000
+              <span class="pemi">EMI: ₹2,833/mo</span>
+            </div>
+            <button class="pbtn" onclick="openEnquiry('Phonak Audéo Paradise P90','Phonak','₹85,000','₹2,833/mo')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 5 — Signia Pure Charge&Go AX -->
+      <div class="pcard" data-cat="ric">
+        <div class="pimg"><img src="D:\bhavna image\Signia Pure Charge&Go AX.webp" alt="Signia Pure"/>
+          <!-- 📸 TO ADD PHOTO: 
+          <span class="pimg-emoji">🦻</span> -->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Signia</div>
+          <span class="pbadge cat-ric">RIC/RITE</span>
+          <h4>Signia Pure Charge&amp;Go AX</h4>
+          <p>Augmented Xperience — split processing separates speech from background.</p>
+          <div class="pfeats">
+            <span class="pfeat">Augmented Xperience</span>
+            <span class="pfeat">Split Processing</span>
+            <span class="pfeat">Own Voice</span>
+            <span class="pfeat">Rechargeable</span>
+          </div>
+          <div class="pfooter">
+            <div class="pprice">
+              <del>₹89,000</del> ₹75,000
+              <span class="pemi">EMI: ₹2,500/mo</span>
+            </div>
+            <button class="pbtn" onclick="openEnquiry('Signia Pure Charge&Go AX','Signia','₹75,000','₹2,500/mo')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 6 — Oticon More 1 miniRITE -->
+      <div class="pcard" data-cat="ric">
+        <div class="pimg"><img src="D:\bhavna image\Oticon More 1 miniRITE.webp" alt="Oticon More"/>
+          <!-- 📸 TO ADD PHOTO:  
+          <span class="pimg-emoji">👂</span>-->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Oticon</div>
+          <span class="pbadge cat-ric">RIC/RITE</span>
+          <h4>Oticon More 1 miniRITE</h4>
+          <p>Deep Neural Network trained on 12M real-life sounds for natural hearing.</p>
+          <div class="pfeats">
+            <span class="pfeat">Deep Neural Network</span>
+            <span class="pfeat">BrainHearing</span>
+            <span class="pfeat">360° Sound</span>
+            <span class="pfeat">Polaris Platform</span>
+          </div>
+          <div class="pfooter">
+            <div class="pprice">
+              <del>₹92,000</del> ₹80,000
+              <span class="pemi">EMI: ₹2,667/mo</span>
+            </div>
+            <button class="pbtn" onclick="openEnquiry('Oticon More 1 miniRITE','Oticon','₹80,000','₹2,667/mo')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 7 — Widex MOMENT Sheer sRIC -->
+      <div class="pcard" data-cat="ric">
+        <div class="pimg"><img src="D:\bhavna image\Widex MOMENT Sheer sRIC.webp" alt="Widex Moment"/>
+          <!-- 📸 TO ADD PHOTO: 
+          <span class="pimg-emoji">🦻</span> -->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Widex</div>
+          <span class="pbadge cat-ric">RIC/RITE</span>
+          <h4>Widex MOMENT Sheer sRIC</h4>
+          <p>ZeroDelay 0.5ms — most natural, instantly processed sound available.</p>
+          <div class="pfeats">
+            <span class="pfeat">ZeroDelay 0.5ms</span>
+            <span class="pfeat">SoundSense AI</span>
+            <span class="pfeat">Rechargeable</span>
+            <span class="pfeat">Wind Protection</span>
+          </div>
+          <div class="pfooter">
+            <div class="pprice">
+              <del>₹82,000</del> ₹68,000
+              <span class="pemi">EMI: ₹2,267/mo</span>
+            </div>
+            <button class="pbtn" onclick="openEnquiry('Widex MOMENT Sheer sRIC','Widex','₹68,000','₹2,267/mo')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 8 — ReSound ONE RIE -->
+      <div class="pcard" data-cat="ric">
+        <div class="pimg"><img src="D:\bhavna image\ReSound ONE RIE.webp" alt="ReSound ONE"/>
+          <!-- 📸 TO ADD PHOTO: 
+          <span class="pimg-emoji">👂</span> -->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">ReSound</div>
+          <span class="pbadge cat-ric">RIC/RITE</span>
+          <h4>ReSound ONE RIE</h4>
+          <p>All-Access Directionality with M&amp;RIE receiver-in-ear microphone.</p>
+          <div class="pfeats">
+            <span class="pfeat">M&amp;RIE 3-Mic</span>
+            <span class="pfeat">All-Access Dir.</span>
+            <span class="pfeat">Rechargeable</span>
+            <span class="pfeat">Made for iPhone</span>
+          </div>
+          <div class="pfooter">
+            <div class="pprice">
+              <del>₹70,000</del> ₹58,000
+              <span class="pemi">EMI: ₹1,933/mo</span>
+            </div>
+            <button class="pbtn" onclick="openEnquiry('ReSound ONE RIE','ReSound','₹58,000','₹1,933/mo')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ============================================================
+           ITE / CIC / IIC  (In-The-Ear / Invisible)
+           data-cat="ite"  ← do not change this
+      ============================================================ -->
+
+      <!-- PRODUCT 9 — Phonak Virto M90 Titanium -->
+      <div class="pcard" data-cat="ite">
+        <div class="pimg"><img src="D:\bhavna image\Phonak Virto M90 Titanium.webp" alt="Phonak Virto"/>
+          <!-- 📸 TO ADD PHOTO: 
+          <span class="pimg-emoji">👂</span> -->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Phonak</div>
+          <span class="pbadge cat-ite">ITE/CIC</span>
+          <h4>Phonak Virto M90 Titanium</h4>
+          <p>Custom titanium CIC — virtually invisible in the ear canal.</p>
+          <div class="pfeats">
+            <span class="pfeat">Titanium Shell</span>
+            <span class="pfeat">Custom CIC</span>
+            <span class="pfeat">AutoSense OS 3.0</span>
+            <span class="pfeat">Invisible</span>
+          </div>
+          <div class="pfooter">
+            <div class="pprice">
+              <del>₹1,08,000</del> ₹90,000
+              <span class="pemi">EMI: ₹3,000/mo</span>
+            </div>
+            <button class="pbtn" onclick="openEnquiry('Phonak Virto M90 Titanium','Phonak','₹90,000','₹3,000/mo')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 10 — Widex MOMENT CIC Custom -->
+      <div class="pcard" data-cat="ite">
+        <div class="pimg"><img src="D:\bhavna image\Widex MOMENT CIC Custom.webp" alt="Widex CIC"/> 
+          <!-- 📸 TO ADD PHOTO: 
+          <span class="pimg-emoji">👂</span>-->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Widex</div>
+          <span class="pbadge cat-ite">ITE/CIC</span>
+          <h4>Widex MOMENT CIC Custom</h4>
+          <p>Custom CIC with ZeroDelay processing for natural, crisp sound.</p>
+          <div class="pfeats">
+            <span class="pfeat">Custom CIC</span>
+            <span class="pfeat">ZeroDelay</span>
+            <span class="pfeat">Natural Sound</span>
+            <span class="pfeat">Discreet</span>
+          </div>
+          <div class="pfooter">
+            <div class="pprice">
+              <del>₹78,000</del> ₹65,000
+              <span class="pemi">EMI: ₹2,167/mo</span>
+            </div>
+            <button class="pbtn" onclick="openEnquiry('Widex MOMENT CIC Custom','Widex','₹65,000','₹2,167/mo')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 11 — Signia Insio C&G AX ITE -->
+      <div class="pcard" data-cat="ite">
+        <div class="pimg"><img src="D:\bhavna image\Signia Insio C&G AX ITE.webp" alt="Signia Insio"/>
+          <!-- 📸 TO ADD PHOTO: 
+          <span class="pimg-emoji">👂</span> -->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Signia</div>
+          <span class="pbadge cat-ite">ITE/CIC</span>
+          <h4>Signia Insio C&amp;G AX ITE</h4>
+          <p>Rechargeable custom ITE with Augmented Xperience processing.</p>
+          <div class="pfeats">
+            <span class="pfeat">Rechargeable</span>
+            <span class="pfeat">AX Processing</span>
+            <span class="pfeat">Own Voice</span>
+            <span class="pfeat">ITE Shell</span>
+          </div>
+          <div class="pfooter">
+            <div class="pprice">
+              <del>₹84,000</del> ₹70,000
+              <span class="pemi">EMI: ₹2,333/mo</span>
+            </div>
+            <button class="pbtn" onclick="openEnquiry('Signia Insio C&G AX ITE','Signia','₹70,000','₹2,333/mo')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ============================================================
+           ACCESSORIES
+           data-cat="acc"  ← do not change this
+      ============================================================ -->
+
+      <!-- PRODUCT 12 — Hearing Aid Cleaning Kit -->
+      <div class="pcard" data-cat="acc">
+        <div class="pimg"><img src="D:\bhavna image\Hearing Aid Cleaning Kit.webp" alt="Cleaning Kit"/>
+          <!-- 📸 TO ADD PHOTO:  
+          <span class="pimg-emoji">🧰</span>-->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Bhavana Care</div>
+          <span class="pbadge cat-acc">Accessory</span>
+          <h4>Hearing Aid Cleaning Kit</h4>
+          <p>Professional 6-piece kit: brush, wax loop, vent cleaner, cloth, multi-tool.</p>
+          <div class="pfooter">
+            <div class="pprice">₹350</div>
+            <button class="pbtn" onclick="openEnquiry('Hearing Aid Cleaning Kit','Bhavana Care','₹350','')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 13 — Wax Guard Replacement -->
+      <div class="pcard" data-cat="acc">
+        <div class="pimg"><img src="D:\bhavna image\Wax Guard Replacement (10×).webp" alt="Wax Guard"/>
+          <!-- 📸 TO ADD PHOTO:  
+          <span class="pimg-emoji">🛡️</span>-->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Bhavana Care</div>
+          <span class="pbadge cat-acc">Accessory</span>
+          <h4>Wax Guard Replacement (10×)</h4>
+          <p>Universal guards for most RIC, CIC and ITE hearing aids.</p>
+          <div class="pfooter">
+            <div class="pprice">₹180</div>
+            <button class="pbtn" onclick="openEnquiry('Wax Guard Replacement (10×)','Bhavana Care','₹180','')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 14 — UV Electric Dehumidifier -->
+      <div class="pcard" data-cat="acc">
+        <div class="pimg"><img src="D:\bhavna image\UV Electric Dehumidifier.webp" alt="Dehumidifier"/>
+          <!-- 📸 TO ADD PHOTO: 
+          <span class="pimg-emoji">📦</span> -->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Dry-Aid</div>
+          <span class="pbadge cat-acc">Accessory</span>
+          <h4>UV Electric Dehumidifier</h4>
+          <p>UV + heat overnight dryer. Extends hearing aid life, prevents moisture damage.</p>
+          <div class="pfooter">
+            <div class="pprice"><del>₹850</del> ₹650</div>
+            <button class="pbtn" onclick="openEnquiry('UV Electric Dehumidifier','Dry-Aid','₹650','')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 15 — Clip-On Bluetooth Remote Mic -->
+      <div class="pcard" data-cat="acc">
+        <div class="pimg"><img src="D:\bhavna image\Clip-On Bluetooth Remote Mic.webp" alt="Remote Mic"/>
+          <!-- 📸 TO ADD PHOTO:  
+          <span class="pimg-emoji">🎙️</span>-->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">ClearVoice</div>
+          <span class="pbadge cat-acc">Accessory</span>
+          <h4>Clip-On Bluetooth Remote Mic</h4>
+          <p>Streams speaker's voice directly to hearing aids in any noise.</p>
+          <div class="pfooter">
+            <div class="pprice"><del>₹4,200</del> ₹3,500</div>
+            <button class="pbtn" onclick="openEnquiry('Clip-On Bluetooth Remote Mic','ClearVoice','₹3,500','')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 16 — Ear Dome Replacement Set -->
+      <div class="pcard" data-cat="acc">
+        <div class="pimg"><img src="D:\bhavna image\Ear Dome Replacement Set.webp" alt="Ear Domes"/>
+          <!-- 📸 TO ADD PHOTO:  
+          <span class="pimg-emoji">🎧</span>-->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Bhavana Care</div>
+          <span class="pbadge cat-acc">Accessory</span>
+          <h4>Ear Dome Replacement Set</h4>
+          <p>Soft silicone domes in S/M/L/XL/2XL for RIC and RITE hearing aids.</p>
+          <div class="pfooter">
+            <div class="pprice">₹120</div>
+            <button class="pbtn" onclick="openEnquiry('Ear Dome Replacement Set','Bhavana Care','₹120','')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ============================================================
+           BATTERIES
+           data-cat="bat"  ← do not change this
+      ============================================================ -->
+
+      <!-- PRODUCT 17 — Size 312 Batteries -->
+      <div class="pcard" data-cat="bat">
+        <div class="pimg"><img src="D:\bhavna image\Size 312 Batteries (60-pack).webp" alt="Battery 312"/>
+          <!-- 📸 TO ADD PHOTO:  
+          <span class="pimg-emoji">🔋</span>-->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">PowerOne</div>
+          <span class="pbadge cat-bat">Battery</span>
+          <h4>Size 312 Batteries (60-pack)</h4>
+          <p>German premium zinc-air 60-pack. 10–12 day life. Best for RIC/CIC.</p>
+          <div class="pfooter">
+            <div class="pprice">₹280</div>
+            <button class="pbtn" onclick="openEnquiry('Size 312 Batteries (60-pack)','PowerOne','₹280','')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 18 — Size 13 Batteries -->
+      <div class="pcard" data-cat="bat">
+        <div class="pimg"><img src="D:\bhavna image\Size 13 Batteries (60-pack).webp" alt="Battery 13"/>
+          <!-- 📸 TO ADD PHOTO:  
+          <span class="pimg-emoji">🔋</span>-->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">Rayovac</div>
+          <span class="pbadge cat-bat">Battery</span>
+          <h4>Size 13 Batteries (60-pack)</h4>
+          <p>Long-life size 13 zinc-air 60-pack for high-power BTE aids.</p>
+          <div class="pfooter">
+            <div class="pprice">₹290</div>
+            <button class="pbtn" onclick="openEnquiry('Size 13 Batteries (60-pack)','Rayovac','₹290','')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 19 — Universal Charging Case -->
+      <div class="pcard" data-cat="bat">
+        <div class="pimg"><img src="D:\bhavna image\Universal Charging Case.webp" alt="Charging Case"/>
+          <!-- 📸 TO ADD PHOTO:  
+          <span class="pimg-emoji">⚡</span>-->
+        </div>
+        <div class="pbody">
+          <div class="pbrand">SmartCharge</div>
+          <span class="pbadge cat-bat">Battery</span>
+          <h4>Universal Charging Case</h4>
+          <p>USB-C charging case compatible with Phonak, Signia, Oticon.</p>
+          <div class="pfooter">
+            <div class="pprice"><del>₹1,500</del> ₹1,200</div>
+            <button class="pbtn" onclick="openEnquiry('Universal Charging Case','SmartCharge','₹1,200','')">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ╔═══════════════════════════════════════════════════════╗
+           ║  ➕ TO ADD A NEW PRODUCT:                            ║
+           ║  Copy any product block above and paste here.        ║
+           ║  Change data-cat to: bte / ric / ite / acc / bat     ║
+           ║  Update the name, price, description and Enquire     ║
+           ║  button text inside openEnquiry('NAME','BRAND',...)  ║
+           ╚═══════════════════════════════════════════════════════╝ -->
+
+
+    </div><!-- end .pgrid -->
+
+    <div class="shop-note">
+      <span class="sn-ico">💡</span>
+      <div>
+        <strong>Free Hearing Test &amp; Fitting with Every Hearing Aid Purchase</strong>
+        <p>All hearing aids include: 6-month free follow-up · 1-year warranty service · Custom ear-mould fitting · Free repairs during warranty period · Hearing aid cleaning kit included.</p>
+      </div>
+      <a href="appointment.html" class="btn btn-or" style="flex-shrink:0;align-self:flex-start">Get Free Demo Trial</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- BRANDS SECTION -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-hd"><span class="tag">Authorised Dealer</span><h2>Premium <em>International Brands</em></h2><p>Bhavana is an authorised dealer for all major hearing aid manufacturers. We stock the latest models.</p></div>
+    <div class="brand-grid">
+      <div class="brand-card"><div class="brand-ico">🎵</div>Phonak</div>
+      <div class="brand-card"><div class="brand-ico">🎵</div>Signia</div>
+      <div class="brand-card"><div class="brand-ico">🎵</div>Oticon</div>
+      <div class="brand-card"><div class="brand-ico">🎵</div>Widex</div>
+      <div class="brand-card"><div class="brand-ico">🎵</div>ReSound</div>
+      <div class="brand-card"><div class="brand-ico">🎵</div>Starkey</div>
+      <div class="brand-card"><div class="brand-ico">🎵</div>Unitron</div>
+      <div class="brand-card"><div class="brand-ico">🎵</div>Bernafon</div>
+    </div>
+  </div>
+</section>
+
+
+<div id="footer-placeholder"></div>
+<div id="cart-placeholder"></div>
+
+<script src="shared.js"></script>
+<script>
+document.getElementById("nav-placeholder").innerHTML  = window.navHTML;
+document.getElementById("footer-placeholder").innerHTML = window.footerHTML;
+document.getElementById("cart-placeholder").innerHTML  = window.cartHTML;
+initNav("shop.html"); initAOS(); initCart();
+
+/* ── FILTER BUTTONS — show/hide cards by category ── */
+document.querySelectorAll(".sfbtn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".sfbtn").forEach(b => b.classList.remove("act"));
+    btn.classList.add("act");
+    const cat = btn.dataset.cat;
+    document.querySelectorAll(".pcard").forEach(card => {
+      card.classList.toggle("hidden", cat !== "all" && card.dataset.cat !== cat);
+    });
+  });
+});
+
+/* ── ENQUIRY — opens quick modal with product name ──
+   This replaces the old openQuickEnquiry(id) lookup.
+   Now just passes name, brand, price, emi as plain text. ── */
+function openEnquiry(name, brand, price, emi) {
+  const qm = document.getElementById("quickModal"); if (!qm) return;
+  const qi = document.getElementById("qProdInfo");
+  const qt = document.getElementById("qTitle");
+  const qfw = document.getElementById("qFormWrap");
+  const qsc = document.getElementById("qSuccess");
+  const qsub = document.getElementById("qSubmit");
+
+  if (qi) qi.innerHTML = "<strong>" + name + "</strong> · " + brand + " · " + price + (emi ? " · EMI: " + emi : "");
+  if (qt) qt.textContent = "📋 Enquire: " + name;
+  if (qfw) qfw.style.display = "";
+  if (qsc) qsc.style.display = "none";
+  if (qsub) { qsub.textContent = "✅ Submit Enquiry"; qsub.disabled = false; }
+
+  ["qq_name","qq_phone","qq_notes"].forEach(id => { const el = document.getElementById(id); if (el) el.value = ""; });
+  const br = document.getElementById("qq_branch"); if (br) br.value = "";
+
+  qm.hidden = false;
+  requestAnimationFrame(() => qm.classList.add("open"));
+
+  const qClose = document.getElementById("qClose");
+  const qOv = document.getElementById("qOv");
+  if (qClose && !qClose._b) { qClose._b = true; qClose.addEventListener("click", closeQuickModal); }
+  if (qOv    && !qOv._b)   { qOv._b = true;    qOv.addEventListener("click", closeQuickModal); }
+
+  if (qsub) {
+    const fresh = qsub.cloneNode(true);
+    qsub.parentNode.replaceChild(fresh, qsub);
+    fresh.addEventListener("click", async () => {
+      const nm = document.getElementById("qq_name");
+      const ph = document.getElementById("qq_phone");
+      if (!nm || !nm.value.trim() || !ph || !ph.value.trim()) { showToast("Please enter your name and phone."); return; }
+      fresh.textContent = "Saving..."; fresh.disabled = true;
+      const payload = {
+        type: "enquiry",
+        name: nm.value,
+        phone: ph.value,
+        branch: (document.getElementById("qq_branch") || {}).value || "",
+        notes: (document.getElementById("qq_notes") || {}).value || "",
+        items: [{ name: name, brand: brand, cat: "", p: price, emi: emi, qty: 1 }]
+      };
+      try { await fetch(GOOGLE_SHEET_URL, { method:"POST", mode:"no-cors", headers:{"Content-Type":"application/json"}, body:JSON.stringify(payload) }); } catch(_) {}
+      const qfw2 = document.getElementById("qFormWrap");
+      const qsc2 = document.getElementById("qSuccess");
+      if (qfw2) qfw2.style.display = "none";
+      if (qsc2) qsc2.style.display = "block";
+      setTimeout(closeQuickModal, 3200);
+      showToast("✅ Enquiry submitted! We'll call you within 2 hours.");
+    });
+  }
+}
+</script>
+</body>
+</html>
